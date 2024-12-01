@@ -10,6 +10,14 @@ const Home = () => {
           <br />
           Nos mueve nuestra pasión por lavar autos.
         </p>
+        <p>Hemos crecido con la innovación de nuestro equipo de trabajo y con la disposición de ser la mejor cadena de autolavados.
+          <br />
+          Nos mueve nuestra pasión por lavar autos.
+        </p>
+        <p>Hemos crecido con la innovación de nuestro equipo de trabajo y con la disposición de ser la mejor cadena de autolavados.
+          <br />
+          Nos mueve nuestra pasión por lavar autos.
+        </p>
       </section>
     </div>
   )

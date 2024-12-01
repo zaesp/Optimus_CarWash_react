@@ -1,0 +1,40 @@
+.Ventana{
+    height:90vh;
+}
+
+.contenidoCarousel h3{
+    font-size:35px ;
+    font-weight:bold;
+    font-style: italic;
+    color: white ;
+}
+
+.contenidoCarousel p{
+    font-size:20px ;
+    font-style: italic;
+    color: white ;
+}
+
+
+/*
+min-width 800px = dice que si la pantalla es mayor a 800px, se cumplira este media
+*/
+@media (max-width: 768px){
+    .Ventana{
+        height:50vh;
+    }
+
+    .contenidoCarousel h3{
+        font-size:20px ;
+        font-weight:bold;
+        font-style: italic;
+        color: white ;
+    }
+
+    .contenidoCarousel p{
+        font-size:10px ;
+        font-style: italic;
+        color: white ;
+    }
+    
+}

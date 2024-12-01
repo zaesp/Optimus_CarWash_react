@@ -6,6 +6,7 @@ import Home from './views/Home/Home';
 import Servicios from './views/Servicios/Servicios';
 import Reservas from './views/Servicios/Reservas';
 import Puntos from './views/Servicios/Puntos';
+import Promociones from './views/Servicios/Promociones';
 
 //importar todos los componentes(vistas) que se veran 
 
@@ -16,6 +17,7 @@ const App = () => {
       <Navigation/>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/promociones" element={<Promociones />} />
         <Route path="/servicios" element={<Servicios />} /> {/*Añadir las rutas que estan en views*/}
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/puntos" element={<Puntos/>} />
