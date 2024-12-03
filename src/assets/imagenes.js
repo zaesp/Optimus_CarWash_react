@@ -6,9 +6,9 @@ import servicios  from '../assets/img/servicios.jpg';
 import promociones  from '../assets/img/ejm_Promociones.jpg';
 import promo_Estudiante from '../assets/img/promo_Estudiante.jpg';
 import promo_taxista from '../assets/img/promo_taxista.png';
-import FACEBOOK from '../assets/img/FACEBOOK.png';
-import INSTAGRAN from '../assets/img/INSTAGRAN.png';
-import WAPSAP from '../assets/img/WAPSAP.png';
+import facebook from '../assets/img/facebook.png';
+import whatsapp from '../assets/img/whatsapp.png';
+import instagram from '../assets/img/instagram.png';
 
 export default {
     "img1": localAbierto,
@@ -19,7 +19,7 @@ export default {
     "img6": promociones,
     "img7": promo_Estudiante,
     "img8": promo_taxista,
-    "img9": FACEBOOK,
-    "img10": INSTAGRAN,
-    "img11": WAPSAP
+    "img9": facebook,
+    "img10": instagram,
+    "img11": whatsapp
 }
