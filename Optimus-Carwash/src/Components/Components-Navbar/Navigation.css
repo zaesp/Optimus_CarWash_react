@@ -6,6 +6,7 @@
 
 #Container_Navbar {
     background-color: #020202;
+    border-radius: 15px;
 }
 
 .logo_conten {
@@ -21,21 +22,15 @@
 
 .me-auto>.nav-link {
     cursor: pointer;
-    color: white;
-    font-size: 20px;
-    padding-left: 20px;
-}
-
-.nav-link:hover {
-    background-color: #232222f4;
-    border: 2px solid #eb0404;
+    font-size: 18px;
 }
 
 .me-auto>.nav-link:hover {
-    transform: scale(1.1);
+    background-color: #232222f4;
+    border: 2px solid #eb0404;
+    transform: scale(1.08);
     border-radius: 25px;
-    transition: all 0.2s ease-in-out;
-    color: white;
+    transition: all 0.1s ease-in-out;
 }
 
 .me-auto>.nav-link:visited,
