@@ -5,25 +5,24 @@ import '../Servicios/Promociones.css'
 const Promociones = () => {
   return (
     <>
-      <section className='container'>
-        <h2 className='title_Promocion'>Promociones</h2>
+      <section className="promociones_container">
+        <h2 className="title_promocion">Promociones</h2>
 
-        <div className="row justify-content-around promociones ">
-          
-          <div className="promocion col-lg-6 col-sm-12">
-            <h3 >Promoción 1</h3>
-            <p>Descripción de la promoción 1</p>
-            <img src={imagenes.img7} alt="" />
+        <div className="promociones_row">
+          <div className="promocion">
+            <h3>Promoción 1</h3>
+            <p>¡Aprovecha nuestro lavado premium con descuento esta semana!</p>
+            <img src={imagenes.img7} alt="Promoción 1" />
           </div>
-          
-          <div className="promocion col-lg-6 col-sm-12">
+
+          <div className="promocion">
             <h3>Promoción 2</h3>
-            <p>Descripción de la promoción 2</p>
-            <img src={imagenes.img8} alt="" />
+            <p>Servicio completo de encerado al 50% de descuento.</p>
+            <img src={imagenes.img8} alt="Promoción 2" />
           </div>
-        
         </div>
       </section>
+
     </>
   )
 }

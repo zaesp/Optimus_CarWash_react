@@ -1,109 +1,102 @@
-import { Button, Card } from 'react-bootstrap'
-import imagenes from '../../assets/imagenes.js'
+import { Button, Card } from 'react-bootstrap';
+import imagenes from '../../assets/imagenes.js';
+import '../Servicios/Servicios.css'
 
 const Servicios = () => {
   return (
     <>
-      <h2>Servicios</h2>
-      <div className="row">
+      <section className="servicios_section">
+        <h2 className="servicios_title">Nuestros Servicios</h2>
+        <div className="row justify-content-center">
 
-        <div className="Servicios2R col-12 ">
+          {/* Servicios de 2 ruedas */}
+          <div className="col-12 servicios_categoria">
+            <h3>Servicios de 2 ruedas</h3>
+            <div className="row justify-content-center">
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img6} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>2 ruedas Básico</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado exterior rápido con secado profesional.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
 
-          <h3>Servicios de 2 ruedas</h3>
-
-          <div className="2ruedas row">
-            <Card style={{ width: '18rem' }} className=' col-md-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img6} />
-              <Card.Body>
-                <Card.Title>2 ruedas Basico</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '18rem' }} className='col-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img5} />
-              <Card.Body>
-                <Card.Title>2 ruedas Optimo</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img5} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>2 ruedas Óptimo</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado completo con aplicación de cera y pulido.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
-        </div>
 
-        <div className="Servicios3R col-12">
+          {/* Servicios de 3 ruedas */}
+          <div className="col-12 servicios_categoria">
+            <h3>Servicios de 3 ruedas</h3>
+            <div className="row justify-content-center">
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img6} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>3 ruedas Básico</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado rápido exterior con atención personalizada.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
 
-          <h3>Servicios de 3 ruedas</h3>
-
-          <div className="3ruedas row">
-            <Card style={{ width: '18rem' }} className='col-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img6} />
-              <Card.Body>
-                <Card.Title>3 ruedas basico</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '18rem' }} className='col-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img4} />
-              <Card.Body>
-                <Card.Title>3 ruedas Optimo</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img4} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>3 ruedas Óptimo</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado completo con tratamiento de pintura y desengrasado.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
-        </div>
 
-        <div className="Servicios4R col-12">
+          {/* Servicios de 4 ruedas */}
+          <div className="col-12 servicios_categoria">
+            <h3>Servicios de 4 ruedas</h3>
+            <div className="row justify-content-center">
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img4} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>4 ruedas Básico</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado exterior con aspirado rápido interior.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
 
-          <h3>Servicios de 4 ruedas</h3>
-
-          <div className="4ruedas row">
-            <Card style={{ width: '18rem' }} className='col-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img4} />
-              <Card.Body>
-                <Card.Title>4 ruedas basico</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
-
-            <Card style={{ width: '18rem' }} className='col-6 col-sm-12'>
-              <Card.Img variant="top" src={imagenes.img5} />
-              <Card.Body>
-                <Card.Title>4 ruedas Optimo</Card.Title>
-                <Card.Text>
-                  Some quick example text to build on the card title and make up the
-                  bulk of the card's content.
-                </Card.Text>
-                <Button variant="primary">Ver Precio</Button>
-              </Card.Body>
-            </Card>
+              <Card className="servicio_card col-md-4 col-sm-12">
+                <Card.Img variant="top" src={imagenes.img5} />
+                <Card.Body>
+                  <Card.Title className='servicio_card_title'>4 ruedas Óptimo</Card.Title>
+                  <Card.Text className='servicio_card_text'>
+                    Lavado completo con encerado y desodorización interior.
+                  </Card.Text>
+                  <Button variant="primary">Ver Precio</Button>
+                </Card.Body>
+              </Card>
+            </div>
           </div>
+
         </div>
-
-
-      </div>
+      </section>
     </>
-  )
-}
+  );
+};
 
-export default Servicios
+export default Servicios;

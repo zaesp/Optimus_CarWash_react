@@ -1,3 +1,67 @@
+/* Contenedor principal */
+.promociones_container {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #222 0%, #333 100%);
+    color: white;
+    text-align: center;
+  }
+  
+  /* Título */
+  .title_promocion {
+    font-size: 36px;
+    font-weight: bold;
+    color: #ff0000; /* Rojo para destacar */
+    margin-bottom: 30px;
+  }
+  
+  /* Fila de promociones */
+  .promociones_row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Espacio entre tarjetas */
+    justify-content: center; /* Centra las promociones */
+  }
+  
+  /* Tarjeta de promoción */
+  .promocion {
+    flex: 1 1 300px; /* Ancho flexible */
+    background: #444; /* Fondo oscuro para contrastar */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto suave */
+  }
+  
+  .promocion:hover {
+    transform: translateY(-5px); /* Efecto de "levantar" */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7); /* Sombra más intensa */
+  }
+  
+  /* Título de la promoción */
+  .promocion h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff0000; /* Rojo para títulos */
+    margin-bottom: 15px;
+  }
+  
+  /* Descripción de la promoción */
+  .promocion p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #ddd; /* Gris claro para texto */
+    margin-bottom: 15px;
+  }
+  
+  /* Imagen de la promoción */
+  .promocion img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra */
+    margin-top: 10px;
+  }
+/*
 .title_Promocion{
     text-align: center;
 }
@@ -20,3 +84,4 @@
     width: 100%;
     height: auto;
 }
+*/
