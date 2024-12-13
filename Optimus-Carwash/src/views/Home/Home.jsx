@@ -1,14 +1,20 @@
 import imagenes from '../../assets/imagenes'
-import CarouselComponent from '../../Components/Componentes-Centrales/Carrousel'
+import CarouselComponent from '../../Components/Componentes-Centrales/Carrousel.jsx'
+import { Comentarios } from '../../Components/Componentes-Centrales/Comentarios.jsx'
+
+import '../Home/home.css'
 
 const Home = () => {
   return (
-    <div>
+    <div className='cuerpo'>
       <CarouselComponent />
-      <section>
-        <div className="presentacion d-flex">
+      <section className='Empresa'>
+        
+        <div className="presentacion">
+
+
           <div className="informacion">
-            <h1>Optimus Carwash</h1> <span></span>
+            <h2>Optimus Carwash</h2> <span></span>
             <p>
               Somos una empresa, que brinda el servicio de lavado de vehículos menores y mayores, con una infraestructura única en el sector, con insumos de calidad y máquinas profesionales, pero sobre todo un servicio óptimo.
               <br />
@@ -17,25 +23,37 @@ const Home = () => {
               ¡tendrás una experiencia diferente!
             </p>
           </div>
+
+
+
           <div className="imagenInfo">
             <img src={imagenes.img3} alt="" />
           </div>
+
+
         </div>
       </section>
 
-      <section>
+      <section className="servicios">
         <div className="servicios_info">
           <h2>Nuestros Servicios</h2>
-          <p>Con la comodidad que te mereces te ofrecemos una sala de espera, Smart tc, aire acondicionado, servicios higienicos y Wifi 6</p>
-          <p>Tenemos servicios de dos ruedas desde S/.10
-            <br />
-            y servicios de tres ruedas desde S/.15
-            <br />
-            Y servicios de cuatro ruedas desde S/.30
+          <p>
+            Con la comodidad que te mereces, te ofrecemos una sala de espera con Smart TV, aire acondicionado,
+            servicios higiénicos y Wifi 6 de alta velocidad.
           </p>
+          <p>
+            - Servicios de dos ruedas desde <strong>S/.10</strong><br />
+            - Servicios de tres ruedas desde <strong>S/.15</strong><br />
+            - Servicios de cuatro ruedas desde <strong>S/.30</strong>
+          </p>
+
+          <button className='btn_Servicios'>
+            Ver todos nuestros servicios
+          </button>
+
         </div>
         <div className="servicios_img">
-          <img src={imagenes.img13} alt="" />
+          <img src={imagenes.img13} alt="Nuestros servicios" />
         </div>
       </section>
 
@@ -53,6 +71,7 @@ const Home = () => {
         </div>
       </section>
 
+      <Comentarios />
 
     </div>
   )
