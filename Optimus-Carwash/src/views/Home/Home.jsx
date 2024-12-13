@@ -57,20 +57,6 @@ const Home = () => {
         </div>
       </section>
 
-      <section>
-        <div className="horario_info">
-          <h2>Horario de Atención</h2>
-          <p>
-            Lunes a Sabado: 9:00am a 6:00pm
-            <br />
-            Domingos: 9:00am a 4:30pm
-          </p>
-        </div>
-        <div className="horario_img">
-          <img src={imagenes.img12} alt="OptimusCarwash" />
-        </div>
-      </section>
-
       <Comentarios />
 
     </div>

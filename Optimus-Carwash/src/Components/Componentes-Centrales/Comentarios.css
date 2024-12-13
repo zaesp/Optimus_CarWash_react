@@ -1,0 +1,58 @@
+/* Sección de comentarios */
+.comentarios {
+    padding: 40px 20px;
+    background: linear-gradient(180deg, #222 0%, #333 100%);
+    color: white;
+    text-align: center;
+}
+
+.comentarios h2 {
+    font-size: 32px;
+    color: #ff0000;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.comentarios_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.comentario {
+    flex: 1 1 300px;
+    background: #444;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: left;
+    position: relative; /*para que la fecha tambien pueda subir*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comentario:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+}
+
+.comentario h3 {
+    font-size: 20px;
+    color: #ff0000;
+    margin-bottom: 10px;
+}
+
+.comentario p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.comentario span {
+    font-size: 14px;
+    color: #ccc;
+    position: absolute; /*para poder salir por ensima del relative*/
+    bottom: 10px;
+    right: 10px;
+}
