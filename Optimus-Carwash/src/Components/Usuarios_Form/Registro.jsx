@@ -1,19 +1,30 @@
-import React, { useState } from "react";
+
+// Registro.js
+import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import "./Registro.css";
 
-const Registro = ({handleValues,handleSumit, user}) => {
+const Registro = ({ handleValues, handleSumit, user }) => {
+  const location = useLocation();
+  const [emailFromQuery, setEmailFromQuery] = useState("");
+
+  useEffect(() => {
+    const queryParams = new URLSearchParams(location.search);
+    const email = queryParams.get("email");
+    if (email) {
+      setEmailFromQuery(email);
+    }
+  }, [location.search]);
 
   return (
     <div className="registro-container">
       <h2>Registro</h2>
       <form onSubmit={handleSumit}>
-
         <label>Usuario</label>
         <input
           type="text"
           name="usuario"
           placeholder="Ingresa tu nombre de usuario"
-
           user={user.usuario}
           onChange={handleValues}
           required
@@ -24,9 +35,11 @@ const Registro = ({handleValues,handleSumit, user}) => {
           type="text"
           name="email"
           placeholder="Ingresa tu email"
-
-          value={user.email}
-          onChange={handleValues}
+          value={emailFromQuery || user.email}
+          onChange={(e) => {
+            setEmailFromQuery("");
+            handleValues(e);
+          }}
           required
         />
 
@@ -41,7 +54,6 @@ const Registro = ({handleValues,handleSumit, user}) => {
           type="password"
           name="password"
           placeholder=""
-
           user={user.password}
           onChange={handleValues}
           required

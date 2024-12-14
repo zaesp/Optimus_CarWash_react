@@ -1,7 +1,26 @@
+// Footer.js
 import './Footer.css';
 import imagenes from '../../assets/imagenes.js';
+import { useNavigate } from 'react-router-dom';
+import { useState } from 'react';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const [email, setEmail] = useState('');
+
+  // Manejar el cambio del input de suscripción
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+  };
+
+  // Manejar el envío del formulario de suscripción
+  const handleSubscription = (e) => {
+    e.preventDefault();
+    if (email) {
+      navigate(`/registro?email=${encodeURIComponent(email)}`);
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -44,8 +63,13 @@ const Footer = () => {
         <div className="subscription-section">
           <h3>Suscríbete</h3>
           <p>¡Recibe nuestras últimas promociones y noticias!</p>
-          <form>
-            <input type="email" placeholder="Tu correo electrónico" />
+          <form onSubmit={handleSubscription}>
+            <input 
+              type="email" 
+              placeholder="Tu correo electrónico" 
+              value={email} 
+              onChange={handleEmailChange} 
+            />
             <button type="submit">Suscribirme</button>
           </form>
         </div>
