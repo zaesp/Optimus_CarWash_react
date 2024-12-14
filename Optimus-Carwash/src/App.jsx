@@ -33,11 +33,11 @@ const App = () => {
 
       {console.log("Usuario actual:", user)}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home user={user} />} />
         <Route path="/:id" element={<Home />} />{/*El home con id de usuario para futuras configuraciones*/}
 
         <Route path="/promociones" element={<Promociones />} />
-        <Route path="/servicios" element={<Servicios />} /> x
+        <Route path="/servicios" element={<Servicios />} />
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/puntos" element={<Puntos />} />
 

@@ -1,6 +1,45 @@
-import React from 'react'
+import { useState, useEffect } from 'react'
 import '../Componentes-Centrales/Comentarios.css'
-export const Comentarios = () => {
+
+const Comentarios = ({ user }) => {
+
+    const [comentarios, setComentarios] = useState([]); // Estado local para comentarios
+    const [nuevoComentario, setNuevoComentario] = useState(""); // Para manejar el input del comentario
+
+    //cargamos comentarios desde el local storage
+    useEffect(() => {
+        const comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || []; //obtenemos lo que esta en la clave comentarios
+        setComentarios(comentariosGuardados);
+    }, []);
+
+    // Función para manejar el envío de un comentario
+    const ValidarComentario = () => {
+
+        const nuevo = {
+            id: Date.now(), // Generar ID basado en timestamp
+            texto: nuevoComentario,
+            usuarioId: user.id,
+            nombre: user.usuario,
+            fecha: new Date().toLocaleDateString("es-ES"), // Fecha en formato local
+        };
+
+        if (!nuevoComentario.trim()) return; // Validar que no esté vacío
+        if (!user) {
+            alert("Debes iniciar sesión para comentar.");
+            return;
+        }
+
+
+        const comentariosActualizados = [nuevo, ...comentarios]; // lo agregamos el nuevo comentario al inicio de la lista
+        setComentarios(comentariosActualizados); // Actualizar el estado
+
+        localStorage.setItem("comentarios", JSON.stringify(comentariosActualizados)); // Guardar en LocalStorage
+        setNuevoComentario(""); // Limpiar el input
+
+    }
+
+
+
     return (
         <>
             <section className="comentarios">
@@ -9,20 +48,43 @@ export const Comentarios = () => {
                 <div className="comentarios_input">
                     <input
                         type="text"
-                        placeholder="Escribe tu comentario..."
+                        placeholder={user ? "Escribe tu comentario..." : "Inicia sesión para comentar" /*validar si esta registrado*/}
                         className="input_comentario"
+
+                        value={nuevoComentario}
+                        onChange={(e) => setNuevoComentario(e.target.value)} // mandamos el valor cuando vea cambios en el input
+                        disabled={!user} // Deshabilitar si no hay un usuario logueado
                     />
-                    <button className="btn_enviar">Enviar</button>
+                    <button className="btn_enviar" onClick={ValidarComentario} disabled={!user} >Enviar</button>
                 </div>
 
+                {/*Comentarios Cargados*/}
                 <div className="comentarios_container">
-                    <div className="comentario">
-                        <h3>Juan Pérez</h3>
-                        <p>
-                            Excelente servicio, dejaron mi auto como nuevo. Muy recomendado.
-                        </p>
-                        <span>12/12/2024</span>
-                    </div>
+                    {comentarios.length > 0 ? (
+                        comentarios.map((comentario) => (
+                            <div className="comentario" key={comentario.id}>
+                                <h3>{comentario.nombre}</h3>
+                                <p>{comentario.texto}</p>
+                                <span>{comentario.fecha}</span>
+                            </div>
+                        ))
+                    ) : (
+                        <p>No hay comentarios. ¡Sé el primero en comentar!</p>
+                    )}
+                </div>
+            </section>
+        </>
+    )
+}
+
+export default Comentarios;
+
+/*
+Ejemplos de comentarios
+
+
+
+
                     <div className="comentario">
                         <h3>Maria López</h3>
                         <p>
@@ -65,8 +127,4 @@ export const Comentarios = () => {
                         </p>
                         <span>08/12/2024</span>
                     </div>
-                </div>
-            </section>
-        </>
-    )
-}
+*/
