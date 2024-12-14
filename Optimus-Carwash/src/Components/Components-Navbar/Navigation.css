@@ -1,46 +1,181 @@
-* {
-    margin: 0;
-    padding: 0;
+/* Navbar General */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px; /* Ajusta el espaciado */
+    background-color: #111111; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    position: fixed; /* Fijo en la parte superior */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra */
+    box-sizing: border-box; /* Asegura que el padding esté dentro del ancho total */
+}
+
+/* Contenedor del Navbar */
+.navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px; /* Máximo ancho del navbar */
+    margin: 0 auto; /* Centra el contenido */
     box-sizing: border-box;
 }
 
-#Container_Navbar {
-    background-color: #020202;
-    border-radius: 15px;
+/* Menú Hamburguesa */
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #ffffff; /* Blanco */
+    display: none; /* Solo visible en pantallas pequeñas */
 }
 
-.logo_conten {
-    height: 10vh;
+.menu-icon span {
+    font-size: 24px;
 }
 
-.logo_nav {
+/* Logo */
+.navbar-logo {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centra el logo */
+    align-items: center;
+}
+
+.logo {
+    max-width: 50px;
+    height: auto;
+}
+
+/* Menú de Opciones (Desktop) */
+.menu-links {
+    flex: 2;
+    display: flex;
+    justify-content: center; /* Centra las opciones */
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.menu-links li a {
+    text-decoration: none;
+    color: #ffffff; /* Blanco */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.menu-links li a:hover {
+    color: #ff0000; /* Rojo */
+}
+
+/* Botón de Iniciar Sesión */
+.login-button {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Posiciona el botón a la derecha */
+    align-items: center;
+}
+
+.btn-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background-color: #ff0000; /* Fondo rojo */
+    color: #ffffff; /* Ícono blanco */
+    font-size: 1.5rem; /* Tamaño del ícono */
+    border-radius: 50%; /* Botón circular */
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.btn-login i {
+    font-size: 1.5rem; /* Tamaño del ícono */
+}
+
+.btn-login:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al pasar el mouse */
+    background-color: #cc0000; /* Fondo rojo más oscuro */
+}
+
+/* Menú Hamburguesa - Mobile Overlay */
+.overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    background-color: #020202;
-    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo oscuro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
 }
 
-.me-auto>.nav-link {
-    cursor: pointer;
-    font-size: 18px;
+.menu-links-mobile {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
 }
 
-.me-auto>.nav-link:hover {
-    background-color: #232222f4;
-    border: 2px solid #eb0404;
-    transform: scale(1.08);
-    border-radius: 25px;
-    transition: all 0.1s ease-in-out;
+.menu-links-mobile li {
+    margin: 15px 0;
 }
 
-.me-auto>.nav-link:visited,
-.me-auto>.nav-link:link {
+.menu-links-mobile a {
     color: white;
+    font-size: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
-@media (max-width: 768px) {
+.menu-links-mobile a:hover {
+    color: #ff0000;
+}
 
-    .logo_conten {
-        height: 8vh;
+.close-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 32px;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .menu-links {
+        display: none; /* Oculta el menú de escritorio */
+    }
+
+    .menu-icon {
+        display: block; /* Muestra el menú hamburguesa */
+    }
+
+    .btn-login {
+        font-size: 1.2rem; /* Ajusta el tamaño en pantallas pequeñas */
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-logo {
+        flex: 1;
+        justify-content: flex-start; /* Ajusta el logo en pantallas pequeñas */
+        margin-left: 10px;
+    }
+
+    .navbar-container {
+        padding: 0 10px; /* Ajusta los bordes en pantallas pequeñas */
     }
 }

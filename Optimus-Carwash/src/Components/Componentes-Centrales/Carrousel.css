@@ -1,89 +1,112 @@
-
 /*************************************************************************************/
+/* Estilo general */
 .contenidoCarousel {
     position: absolute;
-    /*top: 75%;*/
-    transform: translate(-20%, -50%);
+    transform: translate(-10%, -20%); /* Centra horizontalmente */
     text-align: center;
     color: #ffffff;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo negro translúcido */
     border-radius: 15px;
-    max-width: 40%;
-    line-height: 1.4; /* Mejora la separación entre líneas */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Asombra para el cuadro*/
+    padding: 20px;
+    max-width: 50%;
+    line-height: 1.4;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
 
+
 .contenidoCarousel h3 {
-    font-size: 2rem;
-    margin-bottom: 5px;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
 }
 
 .contenidoCarousel p {
-    font-size: 1.2rem;
-    margin: 0px;
+    font-size: 1rem;
+    margin: 0;
     margin-bottom: 15px;
 }
 
+/* Imágenes del carrusel */
 .Ventana img {
-    object-fit: cover;/* Hace que la imagen cubra todo el alto de la ventana */
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor */
+    width: 100%;
+    height: 100%;
 }
 
 .Ventana {
-    height: 110vh;
+    height: 110vh; 
     position: relative;
 }
 
-/*Botones*/
+/* Botones */
 .boton_ventana {
     border-radius: 15px;
-    padding: 5px 15px;
-    background-color: #bc050b; /* Fondo rojo */
-    border-color: #bc050b; /* Borde rojo */
-    color: #ffffff; /* Texto blanco */
-    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+    padding: 8px 20px;
+    background-color: #bc050b;
+    border: none;
+    color: white; 
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .boton_ventana:hover {
     transform: scale(1.1);
-    background-color: #ed0f0f; /* Fondo rojo más oscuro */
-    border-color: #ed0f0f; /* Borde rojo más oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #ed0f0f;
+    color: white;
 }
 
+/* Responsividad */
 
-
-/*
-min-width 800px = dice que si la pantalla es mayor a 800px, se cumplira este media
-
-@media (max-width: 4128px) {
+/* Pantallas medianas*/
+@media (max-width: 1024px) {
     .Ventana {
-        height: 90vh;
+        height: 80vh; /* Reduce la altura del carrusel */
     }
 
     .contenidoCarousel {
-        position: absolute;
-        bottom: 20%;
-        left: 10%;
-        transform: translate(-10%, -70%);
-        max-width: 40%;
-        max-height: 20%;
+        max-width: 70%; /* Amplía el cuadro para pantallas más pequeñas */
+        padding: 15px;
     }
-    
 
     .contenidoCarousel h3 {
-        font-size: 10px;
-        font-weight: bold;
-        font-style: italic;
-        color: white;
-        margin-bottom: 3px;
+        font-size: 1.5rem; /* Reduce el tamaño del título */
     }
 
     .contenidoCarousel p {
-        font-size: 8px;
-        font-style: italic;
-        color: white;
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
     }
 
+    .boton_ventana {
+        font-size: 0.9rem; /* Reduce el tamaño del botón */
+        padding: 6px 15px;
+    }
+}
+
+/* Pantallas movil*/
+@media (max-width: 768px) {
+    .Ventana {
+        height: 70vh; /* Reduce aún más la altura */
+    }
+
+    .contenidoCarousel {
+        bottom: 15%; /* Eleva un poco el cuadro */
+        max-width: 80%; /* Amplía el cuadro */
+        padding: 10px;
+        transform: translate(-0%, -20%); /* Centra horizontalmente */
+    }
+
+    .contenidoCarousel h3 {
+        font-size: 1.2rem; /* Reduce el tamaño del título */
+    }
+
+    .contenidoCarousel p {
+        font-size: 0.8rem; /* Reduce el tamaño del texto */
+    }
+
+    .boton_ventana {
+        font-size: 0.8rem; /* Reduce el tamaño del botón */
+        padding: 5px 10px;
+    }
 }

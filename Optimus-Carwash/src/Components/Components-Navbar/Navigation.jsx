@@ -1,32 +1,91 @@
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import imagenes from '../../assets/imagenes';
-import "../Components-Navbar/Navigation.css"
+import '../Components-Navbar/Navigation.css';
 
 const Navigation = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); //dato booleano
+
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
   return (
-    <Navbar  expand="lg" className="bg-body-tertiary ">
+    <nav className="navbar">
+      <div className="navbar-container">
+        {/* Menú Hamburguesa */}
+        <div className="menu-icon" onClick={toggleMenu}>
+          <span>&#9776;</span>
+        </div>
 
-      <Container id='Container_Navbar'>
+        {/* Logo */}
+        <div className="navbar-logo">
+          <img src={imagenes.img3} alt="Logo" className="logo" />
+        </div>
 
-        <Navbar.Brand href="/" className='logo_conten'>
-          <img className='logo_nav' src={imagenes.img3} />
-        </Navbar.Brand>
+        {/* Opciones del menú */}
+        <ul className="menu-links">
+          <li>
+            <Link to="/">Inicio</Link>
+          </li>
+          <li>
+            <Link to="/promociones">Promociones </Link>
+          </li>
+          <li>
+            <Link to="/servicios">Servicios</Link>
+          </li>
+          <li>
+            <Link to="/reservas">Reservas</Link>
+          </li>
+          <li>
+            <Link to="/puntos">Puntos</Link>
+          </li>
+        </ul>
 
-        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
-        <Navbar.Collapse id="basic-navbar-nav ">
+        {/* Botón de Iniciar Sesión */}
+        <div className="login-button">
+          <Link to="/login" className="btn-login">
+            <i class="fa-solid fa-user"></i> {/* Ícono de usuario */}
+          </Link>
+        </div>
 
-          <Nav className="me-auto ">
-            <Link to="/" className='nav-link'>Home</Link>
-            <Link to="/promociones" className='nav-link'>Promociones</Link>
-            <Link to="/servicios" className='nav-link'>Servicios</Link>
-            <Link to="/reservas" className='nav-link'>Reserva</Link>
-            <Link to="/puntos" className='nav-link'>Puntos</Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
-  )
-}
+      </div>
 
-export default Navigation
+      {/* Menú Desplegable (Hamburguesa) */}
+      {isMenuOpen && (
+        <div className="overlay-menu">
+          <button className="close-menu" onClick={toggleMenu}>
+            &times;
+          </button>
+          <ul className="menu-links-mobile">
+            <li>
+              <Link to="/" onClick={toggleMenu}>
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link to="/promociones" onClick={toggleMenu}>
+                Promociones
+              </Link>
+            </li>
+            <li>
+              <Link to="/servicios" onClick={toggleMenu}>
+                Servicios
+              </Link>
+            </li>
+            <li>
+              <Link to="/reservas" onClick={toggleMenu}>
+                Reservas
+              </Link>
+            </li>
+            <li>
+              <Link to="/puntos" onClick={toggleMenu}>
+                Puntos
+              </Link>
+            </li>
+          </ul>
+        </div>
+      )}
+    </nav>
+  );
+};
+
+export default Navigation;

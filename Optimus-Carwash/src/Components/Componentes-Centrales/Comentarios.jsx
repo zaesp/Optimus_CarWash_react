@@ -5,6 +5,16 @@ export const Comentarios = () => {
         <>
             <section className="comentarios">
                 <h2>Comentarios</h2>
+
+                <div className="comentarios_input">
+                    <input
+                        type="text"
+                        placeholder="Escribe tu comentario..."
+                        className="input_comentario"
+                    />
+                    <button className="btn_enviar">Enviar</button>
+                </div>
+
                 <div className="comentarios_container">
                     <div className="comentario">
                         <h3>Juan Pérez</h3>
