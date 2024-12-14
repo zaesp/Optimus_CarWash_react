@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import imagenes from '../../assets/imagenes';
 import '../Components-Navbar/Navigation.css';
 
-const Navigation = () => {
+const Navigation = ({ user }) => {
+
   const [isMenuOpen, setIsMenuOpen] = useState(false); //dato booleano
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -38,7 +39,37 @@ const Navigation = () => {
           <li>
             <Link to="/puntos">Puntos</Link>
           </li>
+
+
+          {/* Opciones para clientes  (&& verifica si user existe y si es cliente)*/}
+          {user?.tipo === "cliente" && (
+            <li>
+              <Link to={`/perfil/${user.id}`}>Mis Datos</Link>
+            </li>
+          )}
+
+
+          {/* Opciones para administradores */}
+          {user?.tipo === "administrador" && (
+            <>
+              <li>
+                <Link to="/productos">Productos</Link>
+              </li>
+              <li>
+                <Link to="/reservas-admin">Reservas</Link>
+              </li>
+              <li>
+                <Link to="/usuarios">Usuarios</Link>
+              </li>
+              <li>
+                <Link to="/galeria-admin">Galería</Link>
+              </li>
+            </>
+          )}
+
+
         </ul>
+
 
         {/* Botón de Iniciar Sesión */}
         <div className="login-button">
@@ -81,6 +112,43 @@ const Navigation = () => {
                 Puntos
               </Link>
             </li>
+
+            {/* Opciones para clientes */}
+
+            {user?.tipo === "cliente" && (
+              <li>
+                <Link to={`/perfil/${user.id}`} onClick={toggleMenu}>
+                  Mis Datos
+                </Link>
+              </li>
+            )}
+
+            {/* Opciones para administradores */}
+            {user?.tipo === "administrador" && (
+              <>
+                <li>
+                  <Link to="/productos" onClick={toggleMenu}>
+                    Productos
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/reservas-admin" onClick={toggleMenu}>
+                    Reservas
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/usuarios" onClick={toggleMenu}>
+                    Usuarios
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/galeria-admin" onClick={toggleMenu}>
+                    Galería
+                  </Link>
+                </li>
+              </>
+            )}
+
           </ul>
         </div>
       )}

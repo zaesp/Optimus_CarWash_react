@@ -1,0 +1,109 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "usuario": "Admin",
+      "email": "admin@optimuscarwash.com",
+      "tipo": "administrador",
+      "password": "hashed_password"
+    },
+    {
+      "id": 2,
+      "usuario": "Juan",
+      "email": "juan@example.com",
+      "tipo": "cliente",
+      "password": "hashed_password",
+      "puntos": 150
+    },
+    {
+      "id": 3,
+      "usuario": "Anna Picón",
+      "email": "anna@example.com",
+      "tipo": "cliente",
+      "password": "hashed_password",
+      "puntos": 80
+    },
+    {
+      "id": 4,
+      "usuario": "Higidio Castillo",
+      "email": "higidio@example.com",
+      "tipo": "cliente",
+      "password": "hashed_password",
+      "puntos": 50
+    },
+    {
+      "id": "5015",
+      "usuario": "franco",
+      "email": "franco@gmail.com",
+      "tipo": "cliente",
+      "password": "123456"
+    },
+    {
+      "id": "767d",
+      "usuario": "jefferson",
+      "email": "jefferson@gmail.com",
+      "tipo": "cliente",
+      "password": "jefferson123456"
+    },
+    {
+      "id": "c876",
+      "usuario": "franco123",
+      "email": "franco2@gmail.com",
+      "tipo": "administrador",
+      "password": "123456"
+    }
+  ],
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Coca cola",
+      "descripcion": "Obtenga una Coca Cola gratis.",
+      "puntos": 100,
+      "imagen": "url_imagen_lavado_basico"
+    },
+    {
+      "id": 2,
+      "nombre": "Inka Cola",
+      "descripcion": "Obtenga una Inka Cola gratis.",
+      "puntos": 200,
+      "imagen": "url_imagen_lavado_premium"
+    },
+    {
+      "id": 3,
+      "nombre": "Agua San luis",
+      "descripcion": "Obtenga una Agua San Luis gratis.",
+      "puntos": 150,
+      "imagen": "url_imagen_cera_especial"
+    }
+  ],
+  "reservas": [
+    {
+      "id": 1,
+      "clienteId": 2,
+      "fecha": "2024-12-07",
+      "hora": "10:00",
+      "servicio": "Lavado Básico",
+      "estado": "pendiente"
+    },
+    {
+      "id": 2,
+      "clienteId": 3,
+      "fecha": "2024-12-07",
+      "hora": "12:00",
+      "servicio": "Lavado Premium",
+      "estado": "confirmado"
+    }
+  ],
+  "imagenesCarrosLavados": [
+    {
+      "id": 1,
+      "url": "url_imagen_carro_lavado_1",
+      "descripcion": "Foto de un carro lavado espectacular."
+    },
+    {
+      "id": 2,
+      "url": "url_imagen_carro_lavado_2",
+      "descripcion": "Otro gran trabajo de lavado."
+    }
+  ]
+}
