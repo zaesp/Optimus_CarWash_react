@@ -17,6 +17,7 @@ import Productos from './views/logeadas/Productos.jsx';
 import ReservasAdmi from './views/logeadas/ReservasAdmi.jsx';
 import Usuarios from './views/logeadas/Usuarios.jsx';
 import GaleriaAdmi from './views/logeadas/GaleriaAdmi.jsx';
+import Galeria from './views/Servicios/GaleriaC.jsx';
 
 //importar todos los componentes(vistas) que se veran 
 
@@ -40,6 +41,7 @@ const App = () => {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/reservas" element={<Reservas />} />
         <Route path="/puntos" element={<Puntos />} />
+        <Route path="/galeria" element={<Galeria/>} />
 
         <Route path="/login" element={<Login setUser={setUser}/>} /> {/*Para configurar el estado de logeado*/ }
         <Route path="/registro" element={<Registro />} />

@@ -1,14 +1,14 @@
 {
   "usuarios": [
     {
-      "id": 1,
+      "id": "1",
       "usuario": "Admin",
       "email": "admin@optimuscarwash.com",
       "tipo": "administrador",
       "password": "hashed_password"
     },
     {
-      "id": 2,
+      "id": "2",
       "usuario": "Juan",
       "email": "juan@example.com",
       "tipo": "cliente",
@@ -16,7 +16,7 @@
       "puntos": 150
     },
     {
-      "id": 3,
+      "id": "3",
       "usuario": "Anna Picón",
       "email": "anna@example.com",
       "tipo": "cliente",
@@ -24,7 +24,7 @@
       "puntos": 80
     },
     {
-      "id": 4,
+      "id": "4",
       "usuario": "Higidio Castillo",
       "email": "higidio@example.com",
       "tipo": "cliente",
@@ -55,21 +55,21 @@
   ],
   "productos": [
     {
-      "id": 1,
+      "id": "1",
       "nombre": "Coca cola",
       "descripcion": "Obtenga una Coca Cola gratis.",
       "puntos": 100,
       "imagen": "url_imagen_lavado_basico"
     },
     {
-      "id": 2,
+      "id": "2",
       "nombre": "Inka Cola",
       "descripcion": "Obtenga una Inka Cola gratis.",
       "puntos": 200,
       "imagen": "url_imagen_lavado_premium"
     },
     {
-      "id": 3,
+      "id": "3",
       "nombre": "Agua San luis",
       "descripcion": "Obtenga una Agua San Luis gratis.",
       "puntos": 150,
@@ -78,7 +78,7 @@
   ],
   "reservas": [
     {
-      "id": 1,
+      "id": "1",
       "clienteId": 2,
       "fecha": "2024-12-07",
       "hora": "10:00",
@@ -86,7 +86,7 @@
       "estado": "pendiente"
     },
     {
-      "id": 2,
+      "id": "2",
       "clienteId": 3,
       "fecha": "2024-12-07",
       "hora": "12:00",
@@ -96,14 +96,58 @@
   ],
   "imagenesCarrosLavados": [
     {
-      "id": 1,
+      "id": "1",
       "url": "url_imagen_carro_lavado_1",
       "descripcion": "Foto de un carro lavado espectacular."
     },
     {
-      "id": 2,
+      "id": "2",
       "url": "url_imagen_carro_lavado_2",
       "descripcion": "Otro gran trabajo de lavado."
+    }
+  ],
+  "Comentarios": [
+    {
+      "id": "1",
+      "usuarioId": 2,
+      "usuario": "Juan",
+      "comentario": "El lavado de este carro fue muy bueno. Gracias por su atención.",
+      "fecha": "2024-12-07"
+    },
+    {
+      "id": "2",
+      "usuarioId": 3,
+      "usuario": "Anna Picón",
+      "comentario": "Este lavado no me gustó. Mejoraría la calidad del producto.",
+      "fecha": "2024-12-08"
+    },
+    {
+      "id": 1734203655342,
+      "comentario": "Soy el administrador, prueba de comentario 3",
+      "usuarioId": "1",
+      "usuario": "Admin",
+      "fecha": "14/12/2024"
+    },
+    {
+      "id": 1734203708894,
+      "comentario": "Soy Franco Admi y tmb es buen servicio",
+      "usuarioId": "c876",
+      "usuario": "franco123",
+      "fecha": "14/12/2024"
+    },
+    {
+      "id": 1734203748550,
+      "comentario": "Soy fraco cliente y me parece wen servicio :3",
+      "usuarioId": "5015",
+      "usuario": "franco",
+      "fecha": "14/12/2024"
+    },
+    {
+      "id": 1734203989353,
+      "comentario": "prueba de comentario ultramente larguisimo :3 , extraño a mi ex",
+      "usuarioId": "c876",
+      "usuario": "franco123",
+      "fecha": "14/12/2024"
     }
   ]
 }

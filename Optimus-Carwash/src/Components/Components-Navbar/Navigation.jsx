@@ -39,6 +39,9 @@ const Navigation = ({ user }) => {
           <li>
             <Link to="/puntos">Puntos</Link>
           </li>
+          <li>
+            <Link to="/galeria">Galeria</Link>
+          </li>
 
 
           {/* Opciones para clientes  (&& verifica si user existe y si es cliente)*/}

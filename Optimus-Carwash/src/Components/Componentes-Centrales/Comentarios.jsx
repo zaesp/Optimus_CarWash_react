@@ -1,5 +1,8 @@
 import { useState, useEffect } from 'react'
 import '../Componentes-Centrales/Comentarios.css'
+import { getComentarios, agregarComentario } from '../../services/ComentariosServices.js'
+
+
 
 const Comentarios = ({ user }) => {
 
@@ -8,18 +11,25 @@ const Comentarios = ({ user }) => {
 
     //cargamos comentarios desde el local storage
     useEffect(() => {
-        const comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || []; //obtenemos lo que esta en la clave comentarios
-        setComentarios(comentariosGuardados);
+        const cargarComentarios = async () => {
+            try {
+                const respuesta = await getComentarios();
+                setComentarios(respuesta);
+            } catch (err) {
+                console.error("Error al cargar los comentarios de la BD", err);
+            }
+        };
+        cargarComentarios();
     }, []);
 
     // Función para manejar el envío de un comentario
-    const ValidarComentario = () => {
+    const ValidarComentario = async () => {
 
         const nuevo = {
             id: Date.now(), // Generar ID basado en timestamp
-            texto: nuevoComentario,
+            comentario: nuevoComentario,
             usuarioId: user.id,
-            nombre: user.usuario,
+            usuario: user.usuario,
             fecha: new Date().toLocaleDateString("es-ES"), // Fecha en formato local
         };
 
@@ -29,14 +39,16 @@ const Comentarios = ({ user }) => {
             return;
         }
 
+        try {
+            await agregarComentario(nuevo);
+            setComentarios([nuevo, ...comentarios]); // Agregamos el nuevo comentario de Primero
 
-        const comentariosActualizados = [nuevo, ...comentarios]; // lo agregamos el nuevo comentario al inicio de la lista
-        setComentarios(comentariosActualizados); // Actualizar el estado
+            setNuevoComentario(""); // Limpiamos el input al enviar el comentario
+        } catch (error) {
+            console.error("Error a la hora de subir el comentario", error);
+        }
 
-        localStorage.setItem("comentarios", JSON.stringify(comentariosActualizados)); // Guardar en LocalStorage
-        setNuevoComentario(""); // Limpiar el input
-
-    }
+    };
 
 
 
@@ -63,8 +75,8 @@ const Comentarios = ({ user }) => {
                     {comentarios.length > 0 ? (
                         comentarios.map((comentario) => (
                             <div className="comentario" key={comentario.id}>
-                                <h3>{comentario.nombre}</h3>
-                                <p>{comentario.texto}</p>
+                                <h3>{comentario.usuario}</h3>
+                                <p>{comentario.comentario}</p>
                                 <span>{comentario.fecha}</span>
                             </div>
                         ))
