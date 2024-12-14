@@ -1,10 +1,10 @@
 import imagenes from '../../assets/imagenes'
 import CarouselComponent from '../../Components/Componentes-Centrales/Carrousel.jsx'
-import { Comentarios } from '../../Components/Componentes-Centrales/Comentarios.jsx'
+import Comentarios  from '../../Components/Componentes-Centrales/Comentarios.jsx' //cuando se exporta con defaul no es necesario llaves, pero si es directamente en la funcion si lo es
 
 import '../Home/home.css'
 
-const Home = () => {
+const Home = ({ user }) => {
   return (
     <div className='cuerpo'>
       <CarouselComponent />
@@ -57,7 +57,7 @@ const Home = () => {
         </div>
       </section>
 
-      <Comentarios />
+      <Comentarios user={user}/>
 
     </div>
   )
