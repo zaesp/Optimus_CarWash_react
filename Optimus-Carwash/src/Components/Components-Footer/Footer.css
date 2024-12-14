@@ -97,7 +97,7 @@
 
 .subscription-section {
   flex: 1 1 100%;
-  margin: 20px 0;
+  margin: 20px 350px;
   text-align: center;
 }
 
@@ -109,7 +109,7 @@
   outline: none;
   width: 60%;
   max-width: 400px;
-  margin-right: 10px;
+  margin-left: 110px;
 }
 
 .subscription-section button {
@@ -205,5 +205,6 @@
 
   .subscription-section input[type="email"] {
     width: 80%;
+    text-align: center;
   }
 }
