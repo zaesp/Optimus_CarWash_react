@@ -3,11 +3,11 @@ import "./Login.css";
 
 const Login = ({ handleValues, handleSumit, sesion }) => {
   return (
-    <div className="login-container">
-      <h2>Iniciar Sesión</h2>
+    <div className="login-container2">
+      <h2 className="h3" >Iniciar Sesión</h2>
 
-      <form onSubmit={handleSumit}>
-        <label>Email</label>
+      <form className="form2" onSubmit={handleSumit}>
+        <label className="label1" >Email</label>
         <input
           type="email"
           name="email" // Importante para que handleValues pueda actualizar el estado
@@ -17,7 +17,7 @@ const Login = ({ handleValues, handleSumit, sesion }) => {
           required
         />
 
-        <label>Contraseña</label>
+        <label className="label1">Contraseña</label>
         <input
           type="password"
           name="password" // Importante para que handleValues pueda actualizar el estado
@@ -27,7 +27,7 @@ const Login = ({ handleValues, handleSumit, sesion }) => {
           required
         />
 
-        <button type="submit">Iniciar Sesión</button>
+        <button className="button3" type="submit">Iniciar Sesión</button>
       </form>
       <p>
         ¿No tienes cuenta? <a href="/registro">Regístrate aquí</a>

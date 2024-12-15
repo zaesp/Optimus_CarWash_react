@@ -96,13 +96,13 @@
   ],
   "Galeria": [
     {
-      "id": 1,
+      "id": "1",
       "titulo": "Lavado Premium",
       "descripcion": "Un lavado completo con atención al detalle.",
       "img": "https://img.freepik.com/foto-gratis/ojo-animal-mirando-cerca-reloj-naturaleza-ia-generativa_188544-15471.jpg"
     },
     {
-      "id": 2,
+      "id": "2",
       "titulo": "Pulido y Encerado",
       "descripcion": "Protección y brillo para tu vehículo.",
       "img": "https://raulperez.tieneblog.net/wp-content/uploads/2015/09/tux.jpg"
@@ -124,39 +124,46 @@
       "fecha": "2024-12-08"
     },
     {
-      "id": 1734203655342,
+      "id": "1734203655342",
       "comentario": "Soy el administrador, prueba de comentario 3",
       "usuarioId": "1",
       "usuario": "Admin",
       "fecha": "14/12/2024"
     },
     {
-      "id": 1734203708894,
+      "id": "1734203708894",
       "comentario": "Soy Franco Admi y tmb es buen servicio",
       "usuarioId": "c876",
       "usuario": "franco123",
       "fecha": "14/12/2024"
     },
     {
-      "id": 1734203748550,
+      "id": "1734203748550",
       "comentario": "Soy fraco cliente y me parece wen servicio :3",
       "usuarioId": "5015",
       "usuario": "franco",
       "fecha": "14/12/2024"
     },
     {
-      "id": 1734203989353,
+      "id": "1734203989353",
       "comentario": "prueba de comentario ultramente larguisimo :3 , extraño a mi ex",
       "usuarioId": "c876",
       "usuario": "franco123",
       "fecha": "14/12/2024"
     },
     {
-      "id": 1734221456071,
+      "id": "1734221456071",
       "comentario": "EsEste es un buen servicio",
       "usuarioId": "c876",
       "usuario": "franco123",
       "fecha": "14/12/2024"
+    },
+    {
+      "id": 1734272917301,
+      "comentario": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas \"Letraset\", las",
+      "usuarioId": "c876",
+      "usuario": "franco123",
+      "fecha": "15/12/2024"
     }
   ]
 }

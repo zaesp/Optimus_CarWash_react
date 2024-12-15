@@ -102,18 +102,20 @@
 }
 
 .subscription-section input[type="email"] {
+  text-align: center;
   padding: 10px 20px;
   font-size: 16px;
   border: none;
   border-radius: 50px;
   outline: none;
-  width: 60%;
+  width: 90%;
   max-width: 400px;
-  margin-left: 110px;
+  margin-left: 100px;
+  margin: 15px;
 }
 
 .subscription-section button {
-  padding: 10px 25px;
+  padding: 15px 30px;
   font-size: 16px;
   color: #fff;
   background: linear-gradient(135deg, #00bcd4, #00e5ff);
@@ -121,6 +123,7 @@
   border-radius: 50px;
   cursor: pointer;
   transition: transform 0.3s, background 0.3s;
+  
 }
 
 .subscription-section button:hover {
@@ -130,7 +133,7 @@
 
 .footer-bottom {
   text-align: center;
-  margin-top: 30px;
+  margin: 30px;
   font-size: 14px;
   color: #ccc;
   border-top: 1px solid #555;
