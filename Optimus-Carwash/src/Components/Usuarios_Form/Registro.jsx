@@ -17,10 +17,10 @@ const Registro = ({ handleValues, handleSumit, user }) => {
   }, [location.search]);
 
   return (
-    <div className="registro-container">
-      <h2>Registro</h2>
-      <form onSubmit={handleSumit}>
-        <label>Usuario</label>
+    <div className="registro-container2">
+      <h2 className="h2">Registro</h2>
+      <form className="form" onSubmit={handleSumit}>
+        <label className="label" >Usuario</label>
         <input
           type="text"
           name="usuario"
@@ -30,7 +30,7 @@ const Registro = ({ handleValues, handleSumit, user }) => {
           required
         />
 
-        <label>Email</label>
+        <label className="label">Email</label>
         <input
           type="text"
           name="email"
@@ -43,13 +43,13 @@ const Registro = ({ handleValues, handleSumit, user }) => {
           required
         />
 
-        <label>Tipo de Usuario</label>
-        <select name="tipo" user={user.tipo} onChange={handleValues}>
+        <label className="label">Tipo de Usuario</label>
+        <select className="select" name="tipo" user={user.tipo} onChange={handleValues}>
           <option value="cliente">Cliente</option>
           <option value="administrador">Administrador</option>
         </select>
 
-        <label>Contraseña</label>
+        <label className="label">Contraseña</label>
         <input
           type="password"
           name="password"
@@ -58,7 +58,7 @@ const Registro = ({ handleValues, handleSumit, user }) => {
           onChange={handleValues}
           required
         />
-        <button type="submit">Registrarse</button>
+        <button className="button" type="submit">Registrarse</button>
       </form>
       <p>
         ¿Ya tienes cuenta? <a href="/login">Inicia sesión aquí</a>

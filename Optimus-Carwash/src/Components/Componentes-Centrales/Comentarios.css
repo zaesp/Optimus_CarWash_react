@@ -47,7 +47,34 @@
     font-size: 16px;
     line-height: 1.6;
     margin-bottom: 10px;
+    max-height: 4.8em; /* Limita el texto a 3 líneas*/
+    overflow-y: auto; /* Habilita el scroll vertical si excede el límite */
+    word-wrap: break-word; /* Asegura que las palabras largas no sobresalgan del contenedor */
+    padding-right: 5px; /* Añade espacio para el scroll */
 }
+
+/* Estilo del scroll */
+.comentario p::-webkit-scrollbar {
+    width: 10px; /* Ancho del scroll */
+    background: #333; /* Fondo del contenedor del scroll */
+    border-radius: 12px; /* Bordes redondeados */
+}
+
+/*Estilo para dar diseño al scroll*/
+.comentario p::-webkit-scrollbar-thumb {
+    background: #ff0000; /* Color del "thumb" del scroll */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.comentario p::-webkit-scrollbar-thumb:hover {
+    background: #ccc; /* Color del thumb al pasar el cursor */
+}
+
+.comentario p::-webkit-scrollbar-track {
+    background: #222; /* Color del fondo del track */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
 
 .comentario span {
     font-size: 14px;
@@ -77,11 +104,12 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
+    color: #000;
 }
 
 .input_comentario:focus {
-    border-color: #ff0000;
-    box-shadow: 0 0 5px rgba(255, 0, 0, 0.5);
+    border-color: #222;
+    box-shadow: 0 0 5px #ccc9;
 }
 
 /* Botón de enviar */

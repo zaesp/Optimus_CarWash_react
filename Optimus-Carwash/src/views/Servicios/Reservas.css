@@ -1,98 +1,135 @@
-/* Fondo exclusivo para la página de reserva */
-.reservationFormPage {
-  background-color: #938585;
-  min-height: 100vh;
+.reservationFormPage2 {
+  background-color: #888;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
-/* Contenedor principal del formulario */
-.reservationFormContainer {
-  background-color: #d4c3c3;
-  padding: 20px;
-  margin: 50px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.reservationFormContainer2 {
+  background: #222;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 800px;
   width: 100%;
+  padding: 20px;
 }
 
-/* Imagen destacada */
-.formHeader {
+.formHeader2 {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
 }
 
-.formImage {
-  width: 300px;
-  height: 300px;
-  object-fit: contain;
-  margin-bottom: -60px;
+.formImage2 {
+  background-color: #555;
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid transparent;
 }
 
-/* Título del formulario */
-.formTitle {
+.formTitle2 {
   text-align: center;
-  font-size: 24px;
-  font-weight: bold;
+  color: #fff;
   margin-bottom: 20px;
-  color: #000;
+  font-size: 30px;
+  font-weight: bold;
 }
 
-/* Estilo general del formulario */
-.reservationForm {
+/* Estructura del formulario */
+.reservationForm2 {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column; /* Cambiar a columna para que todo se alinee correctamente */
   gap: 20px;
 }
 
-/* Columnas del formulario */
-.formColumn {
-  flex: 1;
-  min-width: 300px;
-  color: #fff;
+.formColumnsWrapper2 {
+  display: flex;
+  gap: 20px;
 }
 
-/* Grupo de cada campo */
-.formGroup {
+.formColumn2 {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  margin-bottom: 15px;
+  gap: 15px;
 }
 
-label {
+.formGroup2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.label4 {
+  font-size: 1.0rem;
+  font-weight: 800;
+  color: #fff;
   margin-bottom: 5px;
-  font-weight: bold;
-  color: #000;
 }
 
 input, select, textarea {
   padding: 10px;
-  border: 1px solid #000;
-  color: #fff;
-  border-radius: 4px;
   font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: border-color 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  border-color: #4caf50;
+  outline: none;
 }
 
 textarea {
   resize: none;
+  max-height: 150px;
+  overflow-y: auto;
 }
 
+/* Barra de scroll personalizada */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 5px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
 
 /* Botón de enviar */
-.submitButton2 {
-  background-color: #64a575;
-  color: white;
-  border: none;
-  padding: 10px 15px;
+.submitButton3 {
+  padding: 12px;
   font-size: 16px;
-  border-radius: 4px;
+  color: #fff;
+  background-color: #555;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
-  width: 100%;
+  transition: background-color 0.3s;
+  margin: 0 auto; /* Centrar el botón horizontalmente */
+  display: block;
+  width: 40%;
 }
 
-.submitButton2:hover {
-  background-color: #19d25d;
+.submitButton3:hover {
+  background-color: #244;
+}
+
+/* Mensaje de error */
+.errorMessage2 {
+  color: #d9534f;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 10px;
+  min-height: 20px; /* Reservar espacio incluso cuando el mensaje no esté presente */
+  visibility: hidden; /* Ocultarlo por defecto */
+}
+
+.errorMessage2.visible {
+  visibility: visible; /* Mostrar el mensaje solo cuando sea necesario */
 }
