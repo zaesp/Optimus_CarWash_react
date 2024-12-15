@@ -65,7 +65,7 @@ const Navigation = ({ user }) => {
                 <Link to="/usuarios">Usuarios</Link>
               </li>
               <li>
-                <Link to="/galeria-admin">Galería</Link>
+                <Link to="/galeria2">Galería2</Link>
               </li>
             </>
           )}
@@ -145,8 +145,8 @@ const Navigation = ({ user }) => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/galeria-admin" onClick={toggleMenu}>
-                    Galería
+                  <Link to="/galeria2" onClick={toggleMenu}>
+                    Galería2
                   </Link>
                 </li>
               </>

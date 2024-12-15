@@ -94,16 +94,18 @@
       "estado": "confirmado"
     }
   ],
-  "imagenesCarrosLavados": [
+  "Galeria": [
     {
-      "id": "1",
-      "url": "url_imagen_carro_lavado_1",
-      "descripcion": "Foto de un carro lavado espectacular."
+      "id": 1,
+      "titulo": "Lavado Premium",
+      "descripcion": "Un lavado completo con atención al detalle.",
+      "img": "https://img.freepik.com/foto-gratis/ojo-animal-mirando-cerca-reloj-naturaleza-ia-generativa_188544-15471.jpg"
     },
     {
-      "id": "2",
-      "url": "url_imagen_carro_lavado_2",
-      "descripcion": "Otro gran trabajo de lavado."
+      "id": 2,
+      "titulo": "Pulido y Encerado",
+      "descripcion": "Protección y brillo para tu vehículo.",
+      "img": "https://raulperez.tieneblog.net/wp-content/uploads/2015/09/tux.jpg"
     }
   ],
   "Comentarios": [

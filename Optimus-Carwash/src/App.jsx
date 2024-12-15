@@ -16,8 +16,11 @@ import Perfil from './views/logeadas/Perfil.jsx';
 import Productos from './views/logeadas/Productos.jsx';
 import ReservasAdmi from './views/logeadas/ReservasAdmi.jsx';
 import Usuarios from './views/logeadas/Usuarios.jsx';
-import GaleriaAdmi from './views/logeadas/GaleriaAdmi.jsx';
 import Galeria from './views/Servicios/GaleriaC.jsx';
+
+//formularios de gestion
+import ListGaleria from './views/logeadas/CRUDGaleria/ListGaleria.jsx'
+import AgregarGaleria from './views/logeadas/CRUDGaleria/AgregarGaleria.jsx'
 
 //importar todos los componentes(vistas) que se veran 
 
@@ -50,9 +53,14 @@ const App = () => {
 
 
         <Route path="/productos" element={user?.tipo === "administrador" ? <Productos /> : <Home />} />
+        
         <Route path="/reservas-admin" element={user?.tipo === "administrador" ? <ReservasAdmi /> : <Home />} />
+        
         <Route path="/usuarios" element={user?.tipo === "administrador" ? <Usuarios /> : <Home />} />
-        <Route path="/galeria-admin" element={user?.tipo === "administrador" ? <GaleriaAdmi /> : <Home />} />
+
+        {/*Todo para Gestionar Galeria */}
+        <Route path="/galeria2" element={user?.tipo === "administrador" ? <ListGaleria /> : <Home />} />
+        <Route path="agregarGaleria" element={user?.tipo === "administrador"? <AgregarGaleria /> : <Home />} />
 
       </Routes>
       <Footer />
