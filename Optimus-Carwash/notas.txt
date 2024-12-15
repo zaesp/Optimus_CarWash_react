@@ -1,1 +1,2 @@
 veamos la configutacion de utils, firebase, y poder subir una imagen a la galeria segun la carpeta
+mirar stilos de galeria, y formularios de Galeria
