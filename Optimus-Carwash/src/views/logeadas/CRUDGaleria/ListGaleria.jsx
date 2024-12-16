@@ -2,7 +2,7 @@ import React from 'react'
 import GaleriaTable from '../../../Components/TablaControl/GaleriaTable.jsx'
 
 import { useState,useEffect } from 'react'
-import {ObtenerURLImg} from '../../../services/GaleriaServices.js'
+import {ObtenerURLImg} from '../../../services/GaleriaServices.js' //necesario para obtener la URL de la imagen
 
 
 const ListGaleria = () => {

@@ -21,6 +21,7 @@ import Galeria from './views/Servicios/GaleriaC.jsx';
 //formularios de gestion
 import ListGaleria from './views/logeadas/CRUDGaleria/ListGaleria.jsx'
 import AgregarGaleria from './views/logeadas/CRUDGaleria/AgregarGaleria.jsx'
+//editar
 
 //importar todos los componentes(vistas) que se veran 
 
@@ -28,8 +29,6 @@ import AgregarGaleria from './views/logeadas/CRUDGaleria/AgregarGaleria.jsx'
 const App = () => {
 
   const[user, setUser]= useState(null); //estado global del usuario
-
-
 
   return (
     <Router>

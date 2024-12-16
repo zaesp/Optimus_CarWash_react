@@ -28,13 +28,13 @@ const GaleriaTable = ({ galeria, setGaleria }) => {
                     </thead>
                     <tbody>
                         {galeria.map(({ titulo, descripcion, img, id }) => (
-                            <tr key={id}>
+                            <tr key={id} >
                                 <td>{titulo}</td>
                                 <td>{descripcion}</td>
                                 <td >
                                     <img src={img} alt={titulo} style={{
                                         maxWidth: "auto",
-                                        height: "30px",     
+                                        height: "30px",
                                         display: "block",
                                         margin: "0 auto"
                                     }} />

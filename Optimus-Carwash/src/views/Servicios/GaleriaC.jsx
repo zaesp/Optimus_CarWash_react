@@ -1,7 +1,45 @@
 import React from "react";
 import "./GaleriaC.css";
 
+import { useState, useEffect } from "react";
+import { ObtenerURLImg } from "../../services/GaleriaServices.js";
+
 const GaleriaServicios = () => {
+
+  const [galeria, setGaleria] = useState([])
+
+  useEffect(() => {
+    try {
+      const ListarGaleria = async () => {
+        const galeria = await ObtenerURLImg();
+        setGaleria(galeria);
+      }
+      ListarGaleria();
+    } catch (error) {
+      console.error(error);
+    }
+  }, [])
+
+
+  return (
+    <div className="galeria-container full-width">
+      {galeria.map(({titulo,descripcion,img, id}) => (
+        <div className="card" key={id}>
+          <img src={img} alt={titulo} />
+          <div className="overlay">
+            <h3>{titulo}</h3>
+            <p>{descripcion}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default GaleriaServicios;
+
+/*
+
   const servicios = [
     {
       id: 1,
@@ -59,19 +97,4 @@ const GaleriaServicios = () => {
     },
   ];
 
-  return (
-    <div className="galeria-container full-width">
-      {servicios.map((servicio) => (
-        <div className="card" key={servicio.id}>
-          <img src={servicio.img} alt={servicio.titulo} />
-          <div className="overlay">
-            <h3>{servicio.titulo}</h3>
-            <p>{servicio.descripcion}</p>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
-};
-
-export default GaleriaServicios;
+*/

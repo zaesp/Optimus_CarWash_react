@@ -22,9 +22,10 @@
   /* Card */
   .card {
     position: relative;
-    flex: 1 1 calc(30% - 20px); /* Ocupa 25% del ancho con espacio entre las tarjetas */
-    max-width: calc(70% - 20px); /* Mantén las tarjetas responsivas */
-    overflow: hidden;
+    flex: 1 1 calc(30% - 20px); /* Ocupa 30% del ancho con espacio entre las tarjetas */
+    max-width: calc(30% - 20px); /* Controla el tamaño máximo */
+    height: 250px; /* altura fija */
+    overflow: hidden;/*ocultar lo que se sale del contenedor*/
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -32,10 +33,10 @@
   
   .card img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* ajustar al tamaño del contenedor*/
     display: block;
   }
-  
   .card:hover {
     transform: scale(1.05);
     box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);

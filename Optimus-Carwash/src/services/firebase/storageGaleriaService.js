@@ -6,15 +6,17 @@ import { nameFileUUID } from '../../utils/utils';
 
 const uploadFile =async (imagen)=>{
     try {
-        
+        //nombre unico para el archivo
         const nameWithExtension= nameFileUUID(imagen.name);
-        const restAchico= ref(storage, nameWithExtension);
+        
+        //subiendo archivo a la carpeta
+        const fileRef = ref(storage, `CW-galeria/${nameWithExtension}`);
 
-        const resultado=await uploadBytes(restAchico, imagen);
+        const resultado=await uploadBytes(fileRef, imagen);
         //const refArchivo=await uploadBytes(refArchivo,imagen);
         
         //URL de la imagen
-        const urlArchivo= await getDownloadURL(restAchico); //lo de parentesis en si es lo q retorna
+        const urlArchivo= await getDownloadURL(fileRef); //lo de parentesis en si es lo q retorna
         return urlArchivo;
     }
     catch(error){

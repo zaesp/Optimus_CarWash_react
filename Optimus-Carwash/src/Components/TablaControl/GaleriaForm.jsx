@@ -1,46 +1,63 @@
-import React from 'react'
-import './GaleriaForm.css'
+import React from 'react';
+import './GaleriaForm.css';
 
-const GaleriaForm = () => {
-    return (
-        <>
-            <div className="registro-container">
-                <h2>Titulo de Formulario</h2>
-                <form onSubmit={handleSumit}>
+const GaleriaForm = ({ handleSumit, handleValues, hadleImage, imagen, title }) => {
+  return (
+    <div className="galeria-form-container">
 
-                    <label>Titulo: </label>
-                    <input
-                        type="text"
-                        name="usuario"
-                        placeholder="Ingresa tu nombre de usuario"
+      <h2 className="form-title">{title}</h2>
 
-                        user={user.usuario}
-                        onChange={handleValues}
-                        required
-                    />
+      <form onSubmit={handleSumit} className="galeria-form">
+        {/* Título de imagen */}
+        <div className="form-group">
+          <label htmlFor="titulo">Título</label>
+          <input
+            type="text"
+            id="titulo"
+            className="form-input"
+            placeholder="Ingresa el título de la imagen"
 
-                    <label>Descripcion: </label>
-                    <input
-                        type="text"
-                        name="email"
-                        placeholder="Ingresa tu email"
+            name="titulo"
+            value={imagen.titulo}
+            onChange={handleValues}
+            required
+          />
+        </div>
 
-                        value={user.email}
-                        onChange={handleValues}
-                        required
-                    />
+        {/* Descripción de la imagen */}
+        <div className="form-group">
+          <label htmlFor="descripcion">Descripción</label>
+          <input
+            type="text"
+            id="descripcion"
+            className="form-input"
+            placeholder="Ingresa una descripción"
 
-                    <label>Imagen: </label>
-                    <select name="tipo" user={user.tipo} onChange={handleValues}>
-                        <option value="cliente">Cliente</option>
-                        <option value="administrador">Administrador</option>
-                    </select>
+            name="descripcion"
+            value={imagen.descripcion}
+            onChange={handleValues}
+            required
+          />
+        </div>
 
-                    <button type="submit">Subir</button>
-                </form>
-            </div>
-        </>
-    )
-}
+        {/* Imagen para la galeria */}
+        <div className="form-group">
+          <label htmlFor="foto">Imagen</label>
+          <input
+            type="file"
+            accept="image/*" 
+            id="foto"
+            className="form-input-file"
 
-export default GaleriaForm
+            onChange={hadleImage}
+            required
+          />
+        </div>
+
+        <button type="submit" className="form-submit-btn">Subir</button>
+      </form>
+    </div>
+  );
+};
+
+export default GaleriaForm;
