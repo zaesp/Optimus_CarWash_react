@@ -6,8 +6,8 @@ import { getComentarios, agregarComentario } from '../../services/ComentariosSer
 
 const Comentarios = ({ user }) => {
 
-    const [comentarios, setComentarios] = useState([]); // Estado local para comentarios
-    const [nuevoComentario, setNuevoComentario] = useState(""); // Para manejar el input del comentario
+    const [comentarios, setComentarios] = useState([]); //Comentarios ya guardados
+    const [nuevoComentario, setNuevoComentario] = useState(""); //nuevo comentario a guardar al estado
 
     //cargamos comentarios desde el local storage
     useEffect(() => {

@@ -10,7 +10,7 @@ const GaleriaForm = ({ handleSumit, handleValues, hadleImage, imagen, title }) =
       <form onSubmit={handleSumit} className="galeria-form">
         {/* Título de imagen */}
         <div className="form-group">
-          <label htmlFor="titulo">Título</label>
+          <label htmlFor="titulo">Titulo</label>
           <input
             type="text"
             id="titulo"

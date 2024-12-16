@@ -92,6 +92,28 @@
       "hora": "12:00",
       "servicio": "Lavado Premium",
       "estado": "confirmado"
+    },
+    {
+      "id": "e1c5",
+      "nombre": "franco",
+      "email": "franco@gmail.com",
+      "telefono": "935351763",
+      "vehiculo": "Moto",
+      "servicio": "2 ruedas Optimo",
+      "fecha": "2024-12-18",
+      "hora": "17:26",
+      "notas": "Quiero un  servicio rapido porfavor"
+    },
+    {
+      "id": "d4dc",
+      "nombre": "franco",
+      "email": "franco@gmail.com",
+      "telefono": "935351763",
+      "vehiculo": "Camioneta",
+      "servicio": "2 ruedas Optimo",
+      "fecha": "2024-12-18",
+      "hora": "15:59",
+      "notas": "Quiero un servicio Rapido y fiable"
     }
   ],
   "Galeria": [

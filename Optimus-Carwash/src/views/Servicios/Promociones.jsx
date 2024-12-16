@@ -10,14 +10,14 @@ const Promociones = () => {
 
         <div className="promociones_row">
           <div className="promocion">
-            <h3>Promoción 1</h3>
-            <p>¡Aprovecha nuestro lavado premium con descuento esta semana!</p>
+            <h3>Amigo Universitario</h3>
+            <p>¡Aprovecha esta oportunidad! con tu carnet universitario solicite la lavada de su moto a un precio comodo de 8 soles (promocion valida para cada miecoles) </p>
             <img src={imagenes.img7} alt="Promoción 1" />
           </div>
 
           <div className="promocion">
-            <h3>Promoción 2</h3>
-            <p>Servicio completo de encerado al 50% de descuento.</p>
+            <h3>Amigo Taxista</h3>
+            <p>Para nuestros amigos trabajadores taxistas, obtenga un lavado de su herramienta de trabajo con el comodo precio de 8 soles, ¡No lo Piense mas y APROVECHA!!!</p>
             <img src={imagenes.img8} alt="Promoción 2" />
           </div>
         </div>

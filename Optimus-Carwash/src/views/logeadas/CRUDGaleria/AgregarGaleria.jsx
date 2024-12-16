@@ -112,8 +112,6 @@ const AgregarGaleria = () => {
   }
 
 
-
-
   return (
     <>
       <GaleriaForm
