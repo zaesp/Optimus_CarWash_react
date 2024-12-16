@@ -51,6 +51,13 @@
       "email": "franco2@gmail.com",
       "tipo": "administrador",
       "password": "123456"
+    },
+    {
+      "id": "7f45",
+      "usuario": "Mamani",
+      "email": "Franco@gmail.com",
+      "tipo": "cliente",
+      "password": "987654"
     }
   ],
   "productos": [
@@ -207,6 +214,13 @@
       "comentario": "Priueba de comentario para ver el scroll",
       "usuarioId": "5015",
       "usuario": "franco",
+      "fecha": "16/12/2024"
+    },
+    {
+      "id": 1734384746164,
+      "comentario": "soy franco y me gusta react :3",
+      "usuarioId": "c876",
+      "usuario": "franco123",
       "fecha": "16/12/2024"
     }
   ]
