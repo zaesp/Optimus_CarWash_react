@@ -14,7 +14,6 @@ import Registro from './views/Users/RegistroUsuario.jsx';
 
 import Perfil from './views/logeadas/Perfil.jsx';
 import Productos from './views/logeadas/Productos.jsx';
-import ReservasAdmi from './views/logeadas/ReservasAdmi.jsx';
 import Usuarios from './views/logeadas/Usuarios.jsx';
 import Galeria from './views/Servicios/GaleriaC.jsx';
 
@@ -25,6 +24,7 @@ import AgregarGaleria from './views/logeadas/CRUDGaleria/AgregarGaleria.jsx'
 
 //reservas
 import CreateReservas from './views/logeadas/CRUDReservas/CreateReservas.jsx';
+import ListReservas  from './views/logeadas/CRUDReservas/ListReservas.jsx';
 
 
 const App = () => {
@@ -54,7 +54,7 @@ const App = () => {
 
         <Route path="/productos" element={user?.tipo === "administrador" ? <Productos /> : <Home />} />
 
-        <Route path="/reservas-admin" element={user?.tipo === "administrador" ? <ReservasAdmi /> : <Home />} />
+        <Route path="/reservas-admin" element={user?.tipo === "administrador" ? <ListReservas /> : <Home />} />
 
         <Route path="/usuarios" element={user?.tipo === "administrador" ? <Usuarios /> : <Home />} />
 

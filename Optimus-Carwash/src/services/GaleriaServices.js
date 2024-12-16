@@ -29,7 +29,23 @@ const agregarURLImg = async (direccionImg) => {
 
 }
 
+//eliminar
+
+const eliminarURLImg = async (id) => {
+    try {
+        const respuesta = await axios.delete(`${API_URL}/Galeria/${id}`);
+        console.log(respuesta);
+    } catch (error) {
+        throw error;
+    }
+
+}
+
+
+
 export {
     ObtenerURLImg,
-    agregarURLImg
+    agregarURLImg,
+    eliminarURLImg
+
 };

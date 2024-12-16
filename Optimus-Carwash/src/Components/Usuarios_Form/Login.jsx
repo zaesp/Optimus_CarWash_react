@@ -21,7 +21,7 @@ const Login = ({ handleValues, handleSumit, sesion }) => {
         <input
           type="password"
           name="password" // Importante para que handleValues pueda actualizar el estado
-          placeholder="Ingresa tu contraseña"
+          placeholder=""
           value={sesion.password}
           onChange={handleValues}
           required

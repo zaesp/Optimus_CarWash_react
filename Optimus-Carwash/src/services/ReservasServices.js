@@ -15,7 +15,7 @@ const nuevaReserva = async (reserva) => { //lo que va necesitar (enviaremos usua
 const ObtenerReservas = async () => {
     try {
         const respuesta = await axios.get(`${API_URL}/reservas`);
-        return respuesta.data; //nos llega todo los comentariso
+        return respuesta.data; //nos llega todas las reservas
     } catch (ev) {
         console.error("Error al obtener las Reservas", ev);
         throw ev;

@@ -55,7 +55,7 @@ const InicioSesion = ({ setUser }) => {
       } else {
         Swal.fire({
           title: "Error",
-          text: "Email o contraseña incorrectos",
+          text: "usuario o contraseña incorrectos",
           icon: "error",
           confirmButtonText: "Aceptar",
         });
