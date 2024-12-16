@@ -6,7 +6,7 @@ import Swal from "sweetalert2"; // Para las alertas
 
 const InicioSesion = ({ setUser }) => {
   const [sesion, setSesion] = useState({
-    email: "",
+    usuario: "",
     password: "",
   });
 
@@ -26,10 +26,10 @@ const InicioSesion = ({ setUser }) => {
   const handleSumit = async (ev) => {
     ev.preventDefault();
 
-    const { email, password } = sesion;
+    const { usuario, password } = sesion;
 
     // Validar campos vacíos
-    if (!email || !password) {
+    if (!usuario || !password) {
       Swal.fire({
         title: "Campos Vacíos",
         text: "Todos los campos son obligatorios",
@@ -41,16 +41,16 @@ const InicioSesion = ({ setUser }) => {
 
     try {
       
-      const usuario = await obtenerUsuario(email, password);   // Validar usuario en la base de datos  
-      if (usuario) {
+      const usuarioObtenido = await obtenerUsuario(usuario, password);   // Validar usuario en la base de datos  
+      if (usuarioObtenido) {
         Swal.fire({
           title: "Bienvenido",
-          text: `Hola, ${usuario.usuario}`,
+          text: `Hola, ${usuarioObtenido.usuario}`,
           icon: "success",
           confirmButtonText: "Aceptar",
         });
 
-        setUser(usuario); // Actualiza el estado global del usuario
+        setUser(usuarioObtenido); // Actualiza el estado global del usuario
         navigate(`/`); // Redirigir al home con el ID del usuario  /:id
       } else {
         Swal.fire({

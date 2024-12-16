@@ -7,12 +7,12 @@ const Login = ({ handleValues, handleSumit, sesion }) => {
       <h2 className="h3" >Iniciar Sesión</h2>
 
       <form className="form2" onSubmit={handleSumit}>
-        <label className="label1" >Email</label>
+        <label className="label1" >Usuario</label>
         <input
-          type="email"
-          name="email" // Importante para que handleValues pueda actualizar el estado
-          placeholder="Ingresa tu email"
-          value={sesion.email}
+          type="text"
+          name="usuario" // Importante para que handleValues pueda actualizar el estado
+          placeholder="Ingresa tu nombre de usuario"
+          value={sesion.usuario}
           onChange={handleValues}
           required
         />

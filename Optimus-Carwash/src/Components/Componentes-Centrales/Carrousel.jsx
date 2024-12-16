@@ -1,8 +1,12 @@
-import { Carousel } from 'react-bootstrap';
+import { Button, Carousel } from 'react-bootstrap';
 import imagenes from "../../assets/imagenes.js"
 import "../Componentes-Centrales/Carrousel.css"
+import { useNavigate } from 'react-router-dom';
 
 const CarouselComponent = () => {
+    
+    const navigate = useNavigate();
+
     return (
         <Carousel fade>
             <Carousel.Item className='Ventana'>
@@ -15,7 +19,7 @@ const CarouselComponent = () => {
                 <Carousel.Caption className='contenidoCarousel'>
                     <h3>Ubicanos</h3>
                     <p>Nos pueden encontrar en la av. Alameda a la altura del primer techado rojo</p>
-                    <button className='btn.text-nowrap boton_ventana'>Ver Servicios</button>
+                    {/*<Link Link to="/" className='btn.text-nowrap boton_ventana'>Ver Servicios</Link>*/}
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -29,7 +33,7 @@ const CarouselComponent = () => {
                 <Carousel.Caption className='contenidoCarousel'>
                     <h3>Servicios</h3>
                     <p>Tenemos variedad de servicios y precios que les pueden interesar, he incluso promociones y descuentos que pueden aprovechar.</p>
-                    <button className='btn.text-nowrap  boton_ventana'>Ver Servicios</button>
+                    <Button className='btn.text-nowrap  boton_ventana' onClick={() => navigate('/servicios')}>Ver Servicios</Button>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -56,7 +60,7 @@ const CarouselComponent = () => {
                 <Carousel.Caption className='contenidoCarousel'>
                     <h3>Promociones</h3>
                     <p>Contamos con distintas promociones para universitarios y nuestros amigos mototaxistas, aun que no es la unica forma de conseguirlos. </p>
-                    <button className='boton_ventana '>Ver Promociones</button>
+                    <Button onClick={() => navigate('/promociones')} className='boton_ventana '>Ver Promociones</Button>
                 </Carousel.Caption>
             </Carousel.Item>
 
@@ -70,7 +74,7 @@ const CarouselComponent = () => {
                 <Carousel.Caption className='contenidoCarousel'>
                     <h3>Haga su Reserva</h3>
                     <p>Puedes hacer sus reservas desde este boton.</p>
-                    <button className='btn.text-nowrap  boton_ventana'>Realizar Reserva</button>
+                    <Button to="/reservas" className='btn.text-nowrap  boton_ventana'>Realizar Reserva</Button>
                 </Carousel.Caption>
             </Carousel.Item>
         </Carousel>

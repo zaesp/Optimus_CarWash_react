@@ -12,14 +12,14 @@ const nuevoUsuario = async (usuario) => { //lo que va necesitar (enviaremos usua
 }
 
 //OBTNER USUARIO DE LA BD
-const obtenerUsuario = async (email, password) => {
+const obtenerUsuario = async (usuario, password) => {
     try {
         const respuesta = await axios.get(`${API_URL}/usuarios`);
         const usuarios = respuesta.data;
 
         // Buscar el usuario por email y contraseña
-        const usuario = usuarios.find((u) => u.email === email && u.password === password);
-        return usuario || null; // Devuelve el usuario encontrado o null si no coincide
+        const usuarioObtenido = usuarios.find((u) => u.usuario === usuario && u.password === password);
+        return usuarioObtenido || null; // Devuelve el usuario encontrado o null si no coincide
     } catch (error) {   
         throw new Error("Error al validar el usuario");
     }
