@@ -20,12 +20,20 @@ const obtenerUsuario = async (usuario, password) => {
         // Buscar el usuario por email y contraseña
         const usuarioObtenido = usuarios.find((u) => u.usuario === usuario && u.password === password);
         return usuarioObtenido || null; // Devuelve el usuario encontrado o null si no coincide
-    } catch (error) {   
+    } catch (error) {
         throw new Error("Error al validar el usuario");
     }
 };
 
+const eliminarusuario = async (id) => {
+    try {
+        const respuesta = await axios.delete(`${API_URL}/usuarios/${id}`);
+        return respuesta.data;
+    } catch (error) {
+        throw error;
+    }
 
+}
 
 
 
@@ -34,6 +42,7 @@ const obtenerUsuario = async (usuario, password) => {
 
 export {
     nuevoUsuario,
-    obtenerUsuario
+    obtenerUsuario,
+    eliminarusuario
 };
 

@@ -94,28 +94,6 @@
       "fecha": "2024-12-18",
       "hora": "17:26",
       "notas": "Quiero un  servicio rapido porfavor"
-    },
-    {
-      "id": "d4dc",
-      "nombre": "franco",
-      "email": "franco@gmail.com",
-      "telefono": "935351763",
-      "vehiculo": "Camioneta",
-      "servicio": "2 ruedas Optimo",
-      "fecha": "2024-12-18",
-      "hora": "15:59",
-      "notas": "Quiero un servicio Rapido y fiable"
-    },
-    {
-      "id": "6ea1",
-      "nombre": "franco123",
-      "email": "franco2@gmail.com",
-      "telefono": "935351763",
-      "vehiculo": "Auto",
-      "servicio": "3 ruedas Basico",
-      "fecha": "2024-12-27",
-      "hora": "16:36",
-      "notas": "Servicio Rapidito porfavor"
     }
   ],
   "Galeria": [
@@ -136,6 +114,12 @@
       "titulo": "Gamer",
       "descripcion": "prueba de almacenamiento",
       "img": "https://firebasestorage.googleapis.com/v0/b/clothes-8cf27.firebasestorage.app/o/CW-galeria%2Ff7e5f875-f98c-462d-9a61-6686323f5a2a.jpg?alt=media&token=66637289-5510-45f2-8d91-5308787078df"
+    },
+    {
+      "id": "4383",
+      "titulo": "papaya",
+      "descripcion": "papaya",
+      "img": "https://firebasestorage.googleapis.com/v0/b/clothes-8cf27.firebasestorage.app/o/CW-galeria%2F13ad211d-d3f7-49a6-9978-9f92c4719383.png?alt=media&token=52b156cf-792b-43b1-9325-44c67449a743"
     }
   ],
   "Comentarios": [
@@ -217,7 +201,7 @@
       "fecha": "16/12/2024"
     },
     {
-      "id": 1734384746164,
+      "id": "1734384746164",
       "comentario": "soy franco y me gusta react :3",
       "usuarioId": "c876",
       "usuario": "franco123",

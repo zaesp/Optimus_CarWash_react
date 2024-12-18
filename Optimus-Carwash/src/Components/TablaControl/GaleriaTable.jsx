@@ -1,8 +1,6 @@
 import React from "react";
 import "../TablaControl/GaleriaTable.css";
 import { Link } from "react-router-dom";
-import Swal from 'sweetalert2';
-
 
 
 const GaleriaTable = ({ galeria, handleEliminar }) => {

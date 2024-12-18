@@ -115,6 +115,11 @@ const Navigation = ({ user }) => {
                 Puntos
               </Link>
             </li>
+            <li>
+              <Link to="/galeria" onClick={toggleMenu}>
+                Galeria
+              </Link>
+            </li>
 
             {/* Opciones para clientes */}
 

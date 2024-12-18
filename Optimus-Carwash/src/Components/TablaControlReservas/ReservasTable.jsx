@@ -4,7 +4,9 @@ import { Link } from "react-router-dom";
 
 
 
-const ReservasTable = ({ reserva }) => {
+const ReservasTable = ({ reserva, handleEliminar }) => {
+
+    
     return (
         <div className="table-wrapper">
 
@@ -44,7 +46,7 @@ const ReservasTable = ({ reserva }) => {
                                     <td>{notas}</td>
 
                                     <td className="d-flex justify-content-center align-items-center">
-                                        <button className="btn btn-danger btn-sm" >
+                                        <button className="btn btn-danger btn-sm" onClick={() => handleEliminar(id)}>
                                             <i className="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
@@ -52,7 +54,7 @@ const ReservasTable = ({ reserva }) => {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="8" className="text-center">No hay contenido disponibles</td>
+                                <td colSpan="9" className="text-center">No hay contenido disponibles</td>
                             </tr>
                         )}
                     </tbody>

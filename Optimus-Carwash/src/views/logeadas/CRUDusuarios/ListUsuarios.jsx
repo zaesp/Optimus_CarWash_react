@@ -1,21 +1,21 @@
 import React from 'react'
 import ReservasTable from '../../../Components/TablaControlReservas/ReservasTable'
 import { useState, useEffect } from 'react'
-import { ObtenerReservas, eliminarReserva } from '../../../services/ReservasServices.js'
+import { obtenerUsuario, eliminarusuario } from '../../../services/UserServices.js'
 import Swal from 'sweetalert2'
 
-const ListReservas = () => {
+const ListUsuario = () => {
 
-    const [reserva, setReserva] = useState([]); //es un array de elementos
+    const [usuario, setUsuario] = useState([]); //es un array de elementos
 
     useEffect(() => {
         try {
             // Aquí se haría la petición a la API para obtener la galería
-            const ReservasObtenidas = async () => {
-                const reserva = await ObtenerReservas();
-                setReserva(reserva);
+            const UsuariosLogueados = async () => {
+                const usuarios = await obtenerUsuario();
+                setUsuario(usuarios);
             }
-            ReservasObtenidas();
+            UsuariosLogueados();
         } catch (error) {
             console.error(error);
         }
@@ -37,8 +37,8 @@ const ListReservas = () => {
             if (confirmacion.isConfirmed) {
 
                 //eliminamos desde ReservaServices
-                await eliminarReserva(id)                //Obtenemos lo opuesto al id a eliminar y actualizamos el setGaleria
-                setReserva((preReservas) => preReservas.filter(item => item.id !== id));
+                await eliminarusuario(id)                //Obtenemos lo opuesto al id a eliminar y actualizamos el setGaleria
+                setUsuario((preUsuarios) => preUsuarios.filter(item => item.id !== id));
                 Swal.fire("¡Eliminado!", "El elemento ha sido eliminado.", "success");
             }
         } catch (error) {
@@ -50,13 +50,13 @@ const ListReservas = () => {
             });
         }
     }
-    
+
     return (
         <>
             <h1 className='text-center'>Listado de Reservas</h1>
-            <ReservasTable reserva={reserva} handleEliminar={handleEliminar} />
+            <ReservasTable reserva={usuario} handleEliminar={handleEliminar} />
         </>
     )
 }
 
-export default ListReservas
+export default ListUsuario

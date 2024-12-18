@@ -26,7 +26,7 @@ const agregarURLImg = async (direccionImg) => {
     } catch (error) {
         throw error;
     }
-
+    
 }
 
 //eliminar
