@@ -1,6 +1,6 @@
-import { Button, Card } from 'react-bootstrap';
+import { Card } from 'react-bootstrap';
 import imagenes from '../../assets/imagenes.js';
-import '../Servicios/Servicios.css'
+import '../Servicios/Servicios.css';
 
 const Servicios = () => {
   return (
@@ -18,9 +18,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>2 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado exterior rápido con secado profesional.
+                    Lavado exterior rápido con secado profesional. Ideal para quienes buscan rapidez y calidad.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/20.00</p>
                 </Card.Body>
               </Card>
 
@@ -29,9 +29,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>2 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado completo con aplicación de cera y pulido.
+                    Lavado completo con cera y pulido para un acabado brillante que protege tu vehículo.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/40.00</p>
                 </Card.Body>
               </Card>
             </div>
@@ -46,9 +46,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>3 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado rápido exterior con atención personalizada.
+                    Lavado rápido exterior con atención personalizada para un acabado impecable.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/30.00</p>
                 </Card.Body>
               </Card>
 
@@ -57,9 +57,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>3 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado completo con tratamiento de pintura y desengrasado.
+                    Lavado completo con tratamiento de pintura y desengrasado para un brillo duradero.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/50.00</p>
                 </Card.Body>
               </Card>
             </div>
@@ -74,9 +74,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>4 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado exterior con aspirado rápido interior.
+                    Lavado exterior con aspirado rápido interior para dejar tu vehículo impecable.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/50.00</p>
                 </Card.Body>
               </Card>
 
@@ -85,9 +85,9 @@ const Servicios = () => {
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>4 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
-                    Lavado completo con encerado y desodorización interior.
+                    Lavado completo con encerado y desodorización interior para un confort total.
                   </Card.Text>
-                  <Button variant="primary">Ver Precio</Button>
+                  <p className="servicio_card_price">Precio: S/80.00</p>
                 </Card.Body>
               </Card>
             </div>

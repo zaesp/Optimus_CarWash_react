@@ -33,34 +33,71 @@
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
 }
 
-/*Bordes superiores de la imagen*/
 .servicio_card img {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-top: 10px;
+    width: 100%; /* Hace que las imágenes sean responsivas */
+    height: auto;
 }
 
-/*Stilo para contenido dentro de la carta*/
 .servicio_card_title {
     font-size: 20px;
     font-weight: bold;
     color: #ff0000;
     margin-bottom: 10px;
+    text-align: center; 
 }
 
 .servicio_card_text {
+    font-weight: 500;
     font-size: 16px;
-    color: #ddd;
+    color: #000; 
     line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center; 
 }
 
-/*Stilo para el boton*/
-.servicio_card .btn-primary {
-    background-color: #ff0000;
-    border: none;
-    transition: background-color 0.3s ease;
+/* Estilo para el precio */
+.servicio_card_price {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.servicio_card .btn-primary:hover {
-    background-color: #cc0000;
+/* Media Queries para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .servicio_card_title {
+        font-size: 18px; /* Reduce el tamaño del título */
+    }
+
+    .servicio_card_text {
+        font-size: 14px; /* Reduce el tamaño del texto */
+    }
+
+    .servicio_card_price {
+        font-size: 16px; /* Reduce el tamaño del precio */
+    }
+}
+
+@media (max-width: 576px) {
+    .servicio_card_title {
+        font-size: 16px; /* Títulos más pequeños en móviles */
+    }
+
+    .servicio_card_text {
+        font-size: 12px;
+        margin: 5px 0; /* Espacio más ajustado */
+    }
+
+    .servicio_card_price {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .servicio_card {
+        margin: 5px; /* Reduce los márgenes entre cards */
+    }
 }
