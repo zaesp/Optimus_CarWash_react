@@ -11,7 +11,7 @@ const nuevoUsuario = async (usuario) => { //lo que va necesitar (enviaremos usua
     }
 }
 
-//OBTNER USUARIO DE LA BD
+//OBTNER USUARIO con user y password
 const obtenerUsuario = async (usuario, password) => {
     try {
         const respuesta = await axios.get(`${API_URL}/usuarios`);
@@ -24,6 +24,17 @@ const obtenerUsuario = async (usuario, password) => {
         throw new Error("Error al validar el usuario");
     }
 };
+
+const obtenerTodosUsuarios = async () => {
+    try {
+        const respuesta = await axios.get(`${API_URL}/usuarios`);
+        return respuesta.data;
+    } catch (error) {
+        throw new Error("Error al validar el usuario");
+    }
+};
+
+
 
 const eliminarusuario = async (id) => {
     try {
@@ -43,6 +54,7 @@ const eliminarusuario = async (id) => {
 export {
     nuevoUsuario,
     obtenerUsuario,
+    obtenerTodosUsuarios,
     eliminarusuario
 };
 

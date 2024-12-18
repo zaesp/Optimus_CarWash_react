@@ -1,5 +1,6 @@
 import React from "react";
-import "../TablaControl/GaleriaTable.css";
+//import "../TablaControl/GaleriaTable.css";
+import "../TablaControl/GaleriaForm.css"
 import { Link } from "react-router-dom";
 
 

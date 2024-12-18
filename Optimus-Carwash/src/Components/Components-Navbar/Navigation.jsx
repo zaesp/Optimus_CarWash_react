@@ -22,7 +22,7 @@ const Navigation = ({ user }) => {
           <img src={imagenes.img3} alt="Logo" className="logo" />
         </div>
 
-        {/* Opciones del menú */}
+        {/* Opciones del menú sin iniciar sesion*/}
         <ul className="menu-links">
           <li>
             <Link to="/">Inicio</Link>
@@ -35,9 +35,6 @@ const Navigation = ({ user }) => {
           </li>
           <li>
             <Link to="/reservas">Reservas</Link>
-          </li>
-          <li>
-            <Link to="/puntos">Puntos</Link>
           </li>
           <li>
             <Link to="/galeria">Galeria</Link>
@@ -56,16 +53,13 @@ const Navigation = ({ user }) => {
           {user?.tipo === "administrador" && (
             <>
               <li>
-                <Link to="/productos">Productos</Link>
+                <Link to="/reservas-admin">ReservasAdmi</Link>
               </li>
               <li>
-                <Link to="/reservas-admin">Reservas</Link>
+                <Link to="/usuarios-admin">UsuarioAdmi</Link>
               </li>
               <li>
-                <Link to="/usuarios">Usuarios</Link>
-              </li>
-              <li>
-                <Link to="/galeria2">Galería2</Link>
+                <Link to="/galeria-admin">GaleriaAdmi</Link>
               </li>
             </>
           )}
@@ -83,12 +77,17 @@ const Navigation = ({ user }) => {
 
       </div>
 
+
+
+
+
       {/* Menú Desplegable (Hamburguesa) */}
       {isMenuOpen && (
         <div className="overlay-menu">
           <button className="close-menu" onClick={toggleMenu}>
             &times;
           </button>
+
           <ul className="menu-links-mobile">
             <li>
               <Link to="/" onClick={toggleMenu}>
@@ -110,11 +109,7 @@ const Navigation = ({ user }) => {
                 Reservas
               </Link>
             </li>
-            <li>
-              <Link to="/puntos" onClick={toggleMenu}>
-                Puntos
-              </Link>
-            </li>
+
             <li>
               <Link to="/galeria" onClick={toggleMenu}>
                 Galeria
@@ -122,7 +117,6 @@ const Navigation = ({ user }) => {
             </li>
 
             {/* Opciones para clientes */}
-
             {user?.tipo === "cliente" && (
               <li>
                 <Link to={`/perfil/${user.id}`} onClick={toggleMenu}>
@@ -131,27 +125,23 @@ const Navigation = ({ user }) => {
               </li>
             )}
 
+
             {/* Opciones para administradores */}
             {user?.tipo === "administrador" && (
               <>
                 <li>
-                  <Link to="/productos" onClick={toggleMenu}>
-                    Productos
-                  </Link>
-                </li>
-                <li>
                   <Link to="/reservas-admin" onClick={toggleMenu}>
-                    Reservas
+                    Reservas Admi
                   </Link>
                 </li>
                 <li>
-                  <Link to="/usuarios" onClick={toggleMenu}>
-                    Usuarios
+                  <Link to="/usuarios-admin" onClick={toggleMenu}>
+                    Mis Usuarios
                   </Link>
                 </li>
                 <li>
-                  <Link to="/galeria2" onClick={toggleMenu}>
-                    Galería2
+                  <Link to="/galeria-admin" onClick={toggleMenu}>
+                    Galería Admi
                   </Link>
                 </li>
               </>
@@ -160,6 +150,7 @@ const Navigation = ({ user }) => {
           </ul>
         </div>
       )}
+
     </nav>
   );
 };

@@ -60,7 +60,7 @@ const ListGaleria = () => {
 
     return (
         <>
-            <h1 className='text-center'>Listado de Galerias</h1>
+            <h1 className='text-center'>Galeria</h1>
             <GaleriaTable galeria={galeria} handleEliminar={handleEliminar} />
         </>
     )

@@ -62,7 +62,7 @@ const AgregarGaleria = () => {
         text: 'Guardando el producto',
         icon: 'info',
         showConfirmButton: false,
-        timer: 200000, //cierra automaticamente
+        timer: 2000, //cierra automaticamente
         allowOutsideClick: false
       })
 

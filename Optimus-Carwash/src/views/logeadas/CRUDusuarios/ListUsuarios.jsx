@@ -1,7 +1,7 @@
 import React from 'react'
-import ReservasTable from '../../../Components/TablaControlReservas/ReservasTable'
+import UsuariosTable from '../../../Components/TablaControlUsuarios/UsuariosTable.jsx'
 import { useState, useEffect } from 'react'
-import { obtenerUsuario, eliminarusuario } from '../../../services/UserServices.js'
+import { obtenerTodosUsuarios, eliminarusuario } from '../../../services/UserServices.js'
 import Swal from 'sweetalert2'
 
 const ListUsuario = () => {
@@ -12,7 +12,7 @@ const ListUsuario = () => {
         try {
             // Aquí se haría la petición a la API para obtener la galería
             const UsuariosLogueados = async () => {
-                const usuarios = await obtenerUsuario();
+                const usuarios = await obtenerTodosUsuarios();
                 setUsuario(usuarios);
             }
             UsuariosLogueados();
@@ -53,8 +53,8 @@ const ListUsuario = () => {
 
     return (
         <>
-            <h1 className='text-center'>Listado de Reservas</h1>
-            <ReservasTable reserva={usuario} handleEliminar={handleEliminar} />
+            <h1 className='text-center'>Usuarios</h1>
+            <UsuariosTable usuario={usuario} handleEliminar={handleEliminar} />
         </>
     )
 }

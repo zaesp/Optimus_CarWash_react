@@ -53,7 +53,7 @@ const ListReservas = () => {
     
     return (
         <>
-            <h1 className='text-center'>Listado de Reservas</h1>
+            <h1 className='text-center'>Reservas</h1>
             <ReservasTable reserva={reserva} handleEliminar={handleEliminar} />
         </>
     )

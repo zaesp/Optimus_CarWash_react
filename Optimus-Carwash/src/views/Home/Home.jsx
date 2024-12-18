@@ -2,14 +2,16 @@ import imagenes from '../../assets/imagenes'
 import CarouselComponent from '../../Components/Componentes-Centrales/Carrousel.jsx'
 import Comentarios from '../../Components/Componentes-Centrales/Comentarios.jsx' //cuando se exporta con defaul no es necesario llaves, pero si es directamente en la funcion si lo es
 import { useNavigate } from 'react-router-dom';
-
+import Zoom from 'react-reveal/Zoom';
 import '../Home/home.css'
 
 const Home = ({ user }) => {
   const navigate = useNavigate();
   return (
     <div className='cuerpo'>
+      
       <CarouselComponent />
+
       <section className='Empresa'>
 
         <div className="presentacion">
@@ -59,8 +61,9 @@ const Home = ({ user }) => {
         </div>
       </section>
 
-      <Comentarios user={user} />
-
+      <Zoom>
+        <Comentarios user={user} />
+      </Zoom>
     </div>
   )
 }

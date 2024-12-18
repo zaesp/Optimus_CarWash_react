@@ -1,6 +1,5 @@
 import './ReservasForm.css';
 import imagenes from "../../assets/imagenes.js";
-import { useNavigate } from 'react-router-dom';
 
 const ReservasForm = ({ handleSubmit, handleValues, reserva, user, title }) => {
 
@@ -115,7 +114,7 @@ const ReservasForm = ({ handleSubmit, handleValues, reserva, user, title }) => {
                     </div>
 
                     <button type="submit" className="submitButton3" >
-                        {user ? "Enviar" : "Porfavor Inicie Sesio o Registrese" /*contenido dentro del button*/}
+                        {user ? "Enviar" : "Porfavor Inicie Seccion o Registrese" }
                     </button>
                 </form>
 

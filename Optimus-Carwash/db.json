@@ -51,13 +51,6 @@
       "email": "franco2@gmail.com",
       "tipo": "administrador",
       "password": "123456"
-    },
-    {
-      "id": "7f45",
-      "usuario": "Mamani",
-      "email": "Franco@gmail.com",
-      "tipo": "cliente",
-      "password": "987654"
     }
   ],
   "productos": [
@@ -94,6 +87,28 @@
       "fecha": "2024-12-18",
       "hora": "17:26",
       "notas": "Quiero un  servicio rapido porfavor"
+    },
+    {
+      "id": "591a",
+      "nombre": "franco123",
+      "email": "franco2@gmail.com",
+      "telefono": "123456513",
+      "vehiculo": "Auto",
+      "servicio": "2 ruedas Optimo",
+      "fecha": "2024-12-26",
+      "hora": "18:51",
+      "notas": "rtyuhijfgvhbjnk"
+    },
+    {
+      "id": "2aeb",
+      "nombre": "franco123",
+      "email": "franco2@gmail.com",
+      "telefono": "98563245",
+      "vehiculo": "Camioneta",
+      "servicio": "3 ruedas Optimo",
+      "fecha": "2024-12-19",
+      "hora": "18:32",
+      "notas": "llegare un poco tarde, me cuida please"
     }
   ],
   "Galeria": [
@@ -206,6 +221,13 @@
       "usuarioId": "c876",
       "usuario": "franco123",
       "fecha": "16/12/2024"
+    },
+    {
+      "id": 1734557272998,
+      "comentario": "Oli soy ultimo comentario",
+      "usuarioId": "c876",
+      "usuario": "franco123",
+      "fecha": "18/12/2024"
     }
   ]
 }

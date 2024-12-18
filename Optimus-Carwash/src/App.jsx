@@ -1,30 +1,40 @@
 //pantalla principal (acaba ba el main el header el footer)
 import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //npm i react-r
+
 import Navigation from './Components/Components-Navbar/Navigation';
-import Footer from './Components/Components-Footer/Footer';
+
 import Home from './views/Home/Home';
-import Servicios from './views/Servicios/Servicios';
-//import Reservas from './views/Servicios/Reservas';
-import Puntos from './views/Servicios/Puntos';
 import Promociones from './views/Servicios/Promociones';
+import Servicios from './views/Servicios/Servicios';
+//reservas = CreateReservas
+import Galeria from './views/Servicios/GaleriaC.jsx';
+//perfil
+//reservas admi
+//usuarios admi
+//galeria admi
+
+
 
 import Login from './views/Users/InicioSesion.jsx';
 import Registro from './views/Users/RegistroUsuario.jsx';
 
-import Perfil from './views/logeadas/Perfil.jsx';
-import Productos from './views/logeadas/Productos.jsx';
-import Usuarios from './views/logeadas/Usuarios.jsx';
-import Galeria from './views/Servicios/GaleriaC.jsx';
+import Perfil from './views/logeadas/Perfil.jsx';//mi perfil
 
-//formularios de gestion
+//Gestion de Usuarios
+import ListUsuario from './views/logeadas/CRUDusuarios/ListUsuarios.jsx';
+
+
+//Gestion de Galeria
 import ListGaleria from './views/logeadas/CRUDGaleria/ListGaleria.jsx'
 import AgregarGaleria from './views/logeadas/CRUDGaleria/AgregarGaleria.jsx'
-//editar
 
-//reservas
+
+//Gestion de Reservas
 import CreateReservas from './views/logeadas/CRUDReservas/CreateReservas.jsx';
 import ListReservas  from './views/logeadas/CRUDReservas/ListReservas.jsx';
+
+import Footer from './Components/Components-Footer/Footer';
 
 
 const App = () => {
@@ -42,30 +52,27 @@ const App = () => {
 
         <Route path="/promociones" element={<Promociones />} />
         <Route path="/servicios" element={<Servicios />} />
-        {/*<Route path="/reservas" element={<Reservas user={user} />} /> */}
-        <Route path="/puntos" element={<Puntos />} />
         <Route path="/galeria" element={<Galeria />} />
+
 
         <Route path="/login" element={<Login setUser={setUser} />} /> {/*Para configurar el estado de logeado*/}
         <Route path="/registro" element={<Registro />} />
 
+
         <Route path="/perfil/:id" element={user?.tipo === "cliente" ? <Perfil user={user} /> : <Home />} />{/*devemos pasarle el estado global para que agarre el id*/}
 
 
-        <Route path="/productos" element={user?.tipo === "administrador" ? <Productos /> : <Home />} />
-
-        <Route path="/reservas-admin" element={user?.tipo === "administrador" ? <ListReservas /> : <Home />} />
-
-        <Route path="/usuarios" element={user?.tipo === "administrador" ? <Usuarios /> : <Home />} />
 
         {/*Todo para Gestionar Galeria */}
-        <Route path="/galeria2" element={user?.tipo === "administrador" ? <ListGaleria /> : <Home />} />
+        <Route path="/galeria-admin" element={user?.tipo === "administrador" ? <ListGaleria /> : <Home />} />
         <Route path="agregarGaleria" element={user?.tipo === "administrador" ? <AgregarGaleria /> : <Home />} />
 
         {/*Todo para Gestionar Reservas */}
+        <Route path="/reservas-admin" element={user?.tipo === "administrador" ? <ListReservas /> : <Home />} />
         <Route path="/reservas" element={<CreateReservas user={user} />} />
 
         {/*Todo para Gestionar Usuarios */}
+        <Route path="/usuarios-admin" element={user?.tipo === "administrador" ? <ListUsuario /> : <Home />} />
 
 
       </Routes>

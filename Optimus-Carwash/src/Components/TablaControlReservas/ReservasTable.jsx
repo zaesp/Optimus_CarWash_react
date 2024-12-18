@@ -1,7 +1,5 @@
 import React from "react";
-import "../TablaControlReservas/ReservasTable.css";
-import { Link } from "react-router-dom";
-
+import "../TablaControl/GaleriaTable.css"
 
 
 const ReservasTable = ({ reserva, handleEliminar }) => {
@@ -12,9 +10,6 @@ const ReservasTable = ({ reserva, handleEliminar }) => {
 
             <div className="table-header">
                 <h2>Tabla de Reservas</h2>
-                <Link className="btn-add" to={"/reservas"}>
-                    Añadir Nuevo
-                </Link>
             </div>
 
             <div className="table-container">
