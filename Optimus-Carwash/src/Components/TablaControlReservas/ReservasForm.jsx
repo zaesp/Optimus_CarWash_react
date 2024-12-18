@@ -115,7 +115,7 @@ const ReservasForm = ({ handleSubmit, handleValues, reserva, user, title }) => {
                     </div>
 
                     <button type="submit" className="submitButton3" >
-                        {user ? "Enviar" : "Porfavor Inicie Sesio o Registrese" /*contenido dentro del button*/}
+                        {user ? "Enviar" : "Porfavor Inicie Seccion o Registrese" /*contenido dentro del button*/}
                     </button>
                 </form>
 
