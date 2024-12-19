@@ -26,7 +26,6 @@ const eliminarReserva = async (id) => {
     try {
         const respuesta = await axios.delete(`${API_URL}/reservas/${id}`);
         return respuesta.data;
-        console.log(respuesta);
     } catch (error) {
         throw error;
     }

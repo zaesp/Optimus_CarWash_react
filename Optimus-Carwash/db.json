@@ -24,14 +24,6 @@
       "puntos": 80
     },
     {
-      "id": "4",
-      "usuario": "Higidio Castillo",
-      "email": "higidio@example.com",
-      "tipo": "cliente",
-      "password": "hashed_password",
-      "puntos": 50
-    },
-    {
       "id": "5015",
       "usuario": "franco",
       "email": "franco@gmail.com",
@@ -51,29 +43,6 @@
       "email": "franco2@gmail.com",
       "tipo": "administrador",
       "password": "123456"
-    }
-  ],
-  "productos": [
-    {
-      "id": "1",
-      "nombre": "Coca cola",
-      "descripcion": "Obtenga una Coca Cola gratis.",
-      "puntos": 100,
-      "imagen": "url_imagen_lavado_basico"
-    },
-    {
-      "id": "2",
-      "nombre": "Inka Cola",
-      "descripcion": "Obtenga una Inka Cola gratis.",
-      "puntos": 200,
-      "imagen": "url_imagen_lavado_premium"
-    },
-    {
-      "id": "3",
-      "nombre": "Agua San luis",
-      "descripcion": "Obtenga una Agua San Luis gratis.",
-      "puntos": 150,
-      "imagen": "url_imagen_cera_especial"
     }
   ],
   "reservas": [
@@ -188,13 +157,6 @@
       "fecha": "14/12/2024"
     },
     {
-      "id": "1734272917301",
-      "comentario": "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas \"Letraset\", las",
-      "usuarioId": "c876",
-      "usuario": "franco123",
-      "fecha": "15/12/2024"
-    },
-    {
       "id": "1734357612303",
       "comentario": "soy franco y me gusta su local es gratificante",
       "usuarioId": "5015",
@@ -223,7 +185,7 @@
       "fecha": "16/12/2024"
     },
     {
-      "id": 1734557272998,
+      "id": "1734557272998",
       "comentario": "Oli soy ultimo comentario",
       "usuarioId": "c876",
       "usuario": "franco123",

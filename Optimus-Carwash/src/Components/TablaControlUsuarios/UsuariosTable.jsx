@@ -32,7 +32,7 @@ const UsuariosTable = ({ usuario, handleEliminar }) => {
                                     <td>{tipo}</td>
 
                                     <td className="d-flex justify-content-center align-items-center gap-2">
-                                        <Link className="btn btn-primary btn-sm" to={`/`}>{/* /${id} para ver */}
+                                        <Link className="btn btn-primary btn-sm" to={`/usuario-comentario/${id}`}>{/* /${id} para ver */}
                                             <i class="fa-solid fa-eye"></i>{/*libreria de font awesome icons*/}
                                         </Link>
                                         <button className="btn btn-danger btn-sm" onClick={() => handleEliminar(id)}>
