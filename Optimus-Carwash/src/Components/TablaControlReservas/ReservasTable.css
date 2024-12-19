@@ -1,0 +1,79 @@
+body {
+    background-color: #1a1a1a;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+  
+  .table-wrapper {
+    max-width: 1250px;
+    margin: 50px auto;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 15px;
+  }
+  
+  .table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .table-header h2 {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff;
+  }
+  
+  .btn-add {
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .btn-add:hover {
+    background-color: #cc0000;
+  }
+  
+  .table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    border: 2px solid #333;
+    border-radius: 5px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 2px solid #000;
+  }
+  
+  .table th,
+  .table td {
+    padding: 12px;
+    border-bottom: 1px solid #333;
+  }
+  
+  .table th {
+    background-color: #333;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  
+  .table td {
+    border: 1px solid #ccc;
+    color: #000;
+    word-break: break-word;
+  }
+.icon{
+  margin-left: 3px;
+}
+  /**/

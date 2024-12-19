@@ -1,15 +1,18 @@
 import React from "react";
-import "../TablaControl/GaleriaTable.css"
+import "../TablaControlReservas/ReservasTable.css";
+import { Link } from "react-router-dom";
 
 
-const ReservasTable = ({ reserva, handleEliminar }) => {
 
-    
+const ReservasTable = ({ reserva }) => {
     return (
         <div className="table-wrapper">
 
             <div className="table-header">
-                <h2>Tabla de Reservas</h2>
+                <h2 className="title" >Tabla de Reservas</h2>
+                <Link className="btn-add" to={"/reservas"}>
+                    Añadir Nuevo
+                </Link>
             </div>
 
             <div className="table-container">
@@ -24,7 +27,7 @@ const ReservasTable = ({ reserva, handleEliminar }) => {
                             <th>Fecha</th>
                             <th>Hora</th>
                             <th>Notas</th>
-                            <th>opciones</th>
+                            <th>Opciones</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -40,8 +43,8 @@ const ReservasTable = ({ reserva, handleEliminar }) => {
                                     <td>{hora}</td>
                                     <td>{notas}</td>
 
-                                    <td className="d-flex justify-content-center align-items-center">
-                                        <button className="btn btn-danger btn-sm" onClick={() => handleEliminar(id)}>
+                                    <td>
+                                        <button className="btn btn-danger btn-sm-8 icon" >
                                             <i className="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>
@@ -49,7 +52,7 @@ const ReservasTable = ({ reserva, handleEliminar }) => {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="9" className="text-center">No hay contenido disponibles</td>
+                                <td colSpan="8" className="text-center">No hay contenido disponibles</td>
                             </tr>
                         )}
                     </tbody>
