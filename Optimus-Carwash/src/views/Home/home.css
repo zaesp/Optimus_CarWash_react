@@ -37,7 +37,6 @@
 
 
 .informacion h2 {
-    font-size: 32px;
     font-weight: bold;
     color: #ff0000;
     margin-bottom: 20px;
@@ -89,8 +88,9 @@
     text-align: center;
 }
 
-.sericios_info p {
-    font-size: 18px;
+.servicios_info p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
@@ -117,15 +117,16 @@ v .servicios_img {
 .btn_Servicios {
     background-color: #ff0000;
     color: white;
-    font-size: 16px;
+    font-size: 13px;
     font-weight: bold;
-    padding: 10px 20px;
+    padding: 15px 10px;
     margin: 10px 0;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: all 0.3s ease;
+    margin-left: 253px;
 }
 
 .btn_Servicios:hover {
