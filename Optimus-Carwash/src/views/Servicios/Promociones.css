@@ -1,7 +1,6 @@
 /* Contenedor principal */
 .promociones_container {
     padding: 40px 20px;
-    background: linear-gradient(180deg, #222 0%, #333 100%);
     color: white;
     text-align: center;
   }
@@ -10,7 +9,7 @@
   .title_promocion {
     font-size: 36px;
     font-weight: bold;
-    color: #ff0000; /* Rojo para destacar */
+    color: #000; /* Rojo para destacar */
     margin-bottom: 30px;
   }
   
@@ -47,9 +46,10 @@
   
   /* Descripción de la promoción */
   .promocion p {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.6;
-    color: #ddd; /* Gris claro para texto */
+    color: #fff; /* Gris claro para texto */
     margin-bottom: 15px;
   }
   

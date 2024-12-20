@@ -1,4 +1,4 @@
-.reservationFormPage2 {
+/*.reservationFormPage2 {
   background-color: #888;
   display: flex;
   justify-content: center;
@@ -37,10 +37,10 @@
   font-weight: bold;
 }
 
-/* Estructura del formulario */
+/* Estructura del formulario 
 .reservationForm2 {
   display: flex;
-  flex-direction: column; /* Cambiar a columna para que todo se alinee correctamente */
+  flex-direction: column; /* Cambiar a columna para que todo se alinee correctamente 
   gap: 20px;
 }
 
@@ -87,7 +87,7 @@ textarea {
   overflow-y: auto;
 }
 
-/* Barra de scroll personalizada */
+/* Barra de scroll personalizada 
 textarea::-webkit-scrollbar {
   width: 8px;
 }
@@ -101,7 +101,7 @@ textarea::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
 
-/* Botón de enviar */
+/* Botón de enviar 
 .submitButton3 {
   padding: 12px;
   font-size: 16px;
@@ -111,7 +111,7 @@ textarea::-webkit-scrollbar-track {
   border-radius: 8px;
   cursor: pointer;
   transition: background-color 0.3s;
-  margin: 0 auto; /* Centrar el botón horizontalmente */
+  margin: 0 auto; /* Centrar el botón horizontalmente 
   display: block;
   width: 40%;
 }
@@ -120,16 +120,17 @@ textarea::-webkit-scrollbar-track {
   background-color: #244;
 }
 
-/* Mensaje de error */
+/* Mensaje de error 
 .errorMessage2 {
   color: #d9534f;
   font-size: 14px;
   text-align: center;
   margin-bottom: 10px;
-  min-height: 20px; /* Reservar espacio incluso cuando el mensaje no esté presente */
-  visibility: hidden; /* Ocultarlo por defecto */
+  min-height: 20px; /* Reservar espacio incluso cuando el mensaje no esté presente 
+  visibility: hidden; /* Ocultarlo por defecto 
 }
 
 .errorMessage2.visible {
-  visibility: visible; /* Mostrar el mensaje solo cuando sea necesario */
+  visibility: visible; /* Mostrar el mensaje solo cuando sea necesario 
 }
+*/
