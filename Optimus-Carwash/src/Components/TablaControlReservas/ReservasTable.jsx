@@ -52,7 +52,7 @@ const ReservasTable = ({ reserva, handleEliminar }) => {
                             ))
                         ) : (
                             <tr>
-                                <td colSpan="8" className="text-center">No hay contenido disponibles</td>
+                                <td colSpan="9" className="text-center">No hay contenido disponibles</td>
                             </tr>
                         )}
                     </tbody>

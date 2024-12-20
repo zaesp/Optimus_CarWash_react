@@ -11,6 +11,13 @@ import whatsapp from '../assets/img/whatsapp.png';
 import instagram from '../assets/img/instagram.png';
 import horario from '../assets/img/horario.jpg';
 import precios from '../assets/img/precios.jpg';
+import LavadoCBasico from '../assets/img/LavadoCBasico.jpg';
+import LavadoCOptimo from '../assets/img/LavadoCOptimo.jpg';
+import LavdoMBasico from '../assets/img/LavdoMBasico.jpg';
+import LavadoMOptimo from '../assets/img/LavadoMOptimo.jpg';
+import LavadoTBasico from '../assets/img/LavadoTBasico.jpg';
+import LavadoTOptimo from '../assets/img/LavadoTOptimo.jpg';
+import Perfil from '../assets/img/Perfil.jpg';
 
 export default {
     "img1": localAbierto,
@@ -25,6 +32,13 @@ export default {
     "img10": instagram,
     "img11": whatsapp,
     "img12": horario,
-    "img13": precios
+    "img13": precios,
+    "img14": LavadoCBasico,
+    "img15": LavadoCOptimo,
+    "img16": LavdoMBasico,
+    "img17": LavadoMOptimo,
+    "img18": LavadoTBasico,
+    "img19": LavadoTOptimo,
+    "img20": Perfil
 
-}
+}   

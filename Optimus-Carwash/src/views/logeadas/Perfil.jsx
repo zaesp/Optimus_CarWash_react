@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import './Perfil.scss';
+import imagenes from "../../assets/imagenes";
 
 const Perfil = ({ user }) => {
   const { id } = useParams();
@@ -26,7 +27,7 @@ const Perfil = ({ user }) => {
         <div className="perfil-header">
           <img
           //Se puede cambiar a un imagen
-            src={`https://api.dicebear.com/6.x/identicon/svg?seed=${user.usuario}`}
+            src={imagenes.img20} alt="Perfil"
             alt="Imagen de perfil"
             className="perfil-avatar"
           />
