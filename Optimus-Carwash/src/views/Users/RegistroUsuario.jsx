@@ -2,20 +2,20 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 
-import {nuevoUsuario} from '../../services/UserServices.js'
+import { nuevoUsuario } from '../../services/UserServices.js'
 import Registro from '../../Components/Usuarios_Form/Registro'
 
 import Swal from 'sweetalert2'; //npm install sweetalert2 (Alertas)
-
+import Zoom from 'react-reveal/Zoom';
 
 const RegistroUsuario = () => {
 
     //Estado inicial de usuarios
     const [user, setUser] = useState({
-        usuario: "", 
-        email: "", 
+        usuario: "",
+        email: "",
         tipo: "",
-        password: "", 
+        password: "",
     });
 
     const navigate = useNavigate();
@@ -57,7 +57,7 @@ const RegistroUsuario = () => {
             return; //para que no continue el codigo, por que sino si enviaba nada xd
         }
 
-        const loading =Swal.fire({
+        const loading = Swal.fire({
             title: 'Espere un momento...',
             text: 'Creando Usuario',
             icon: 'info',
@@ -74,7 +74,7 @@ const RegistroUsuario = () => {
 
 
         //Crando el nuevo usuario
-        const resultado = await nuevoUsuario(newUser); 
+        const resultado = await nuevoUsuario(newUser);
         console.log(resultado);
 
         // alert("El producto se gravo satisfactoriamente"); //Cambiado por Swal
@@ -87,17 +87,19 @@ const RegistroUsuario = () => {
             icon: 'success',
             confirmButtonText: 'Aceptar'
         });
-        navigate("/"); 
+        navigate("/");
 
     }
 
     return (
         <>
-            <Registro 
-                        handleSumit={handleSumit} 
-                        handleValues={handleValues}
-                        user={user}
-            />
+            <Zoom>
+                <Registro
+                    handleSumit={handleSumit}
+                    handleValues={handleValues}
+                    user={user}
+                />
+            </Zoom>
         </>
     )
 }

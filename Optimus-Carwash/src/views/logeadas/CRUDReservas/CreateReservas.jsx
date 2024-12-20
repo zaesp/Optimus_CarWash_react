@@ -53,7 +53,7 @@ const CreateReservas = ({ user }) => {
                     title: 'Error',
                     text: 'Por favor, inicia sesión o regístrate para continuar',
                     icon: 'warning',
-                    confirmButtonText: 'Registrarse',
+                    confirmButtonText: 'Iniciar Sesion',
                     preConfirm: () => { //al dar confirmacion redirigiremos
                         navigate("/login");
                     }

@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { obtenerUsuario } from "../../services/UserServices.js"; // Servicio para obtener el usuario
 import Login from "../../Components/Usuarios_Form/Login.jsx"; // Componente del formulario
 import Swal from "sweetalert2"; // Para las alertas
+import Zoom from 'react-reveal/Zoom';
 
 const InicioSesion = ({ setUser }) => {
   const [sesion, setSesion] = useState({
@@ -37,7 +38,7 @@ const InicioSesion = ({ setUser }) => {
 
     try {
       const usuarioObtenido = await obtenerUsuario(email, password);
-      
+
       if (usuarioObtenido) {
         Swal.fire({
           title: "Bienvenido",
@@ -47,7 +48,7 @@ const InicioSesion = ({ setUser }) => {
         });
 
         localStorage.setItem("user", JSON.stringify(usuarioObtenido)); // Almacenamos en el localstorage.
-        console.log("Cuenta de usuario",usuarioObtenido);
+        console.log("Cuenta de usuario", usuarioObtenido);
         setUser(usuarioObtenido);
 
         navigate(`/`);
@@ -70,11 +71,13 @@ const InicioSesion = ({ setUser }) => {
   };
 
   return (
-    <Login
-      handleSumit={handleSumit}
-      handleValues={handleValues}
-      sesion={sesion}
-    />
+    <Zoom>
+      <Login
+        handleSumit={handleSumit}
+        handleValues={handleValues}
+        sesion={sesion}
+      />
+    </Zoom>
   );
 };
 

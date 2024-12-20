@@ -9,7 +9,7 @@ const Home = ({ user }) => {
   const navigate = useNavigate();
   return (
     <div className='cuerpo'>
-      
+
       <CarouselComponent />
 
       <section className='Empresa'>
@@ -54,14 +54,13 @@ const Home = ({ user }) => {
           <button className='btn_Servicios' onClick={() => navigate('/servicios')}>
             Ver todos nuestros servicios
           </button>
-
         </div>
         <div className="servicios_img">
           <img src={imagenes.img13} alt="Nuestros servicios" />
         </div>
       </section>
 
-      <Zoom>
+      <Zoom >
         <Comentarios user={user} />
       </Zoom>
     </div>
