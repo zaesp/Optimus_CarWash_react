@@ -23,7 +23,7 @@ import Perfil from './views/logeadas/Perfil.jsx';//mi perfil
 
 //Gestion de Usuarios
 import ListUsuario from './views/logeadas/CRUDusuarios/ListUsuarios.jsx';
-
+import ListUserComent from './views/logeadas/CRUDusuarios/ListUserComent.jsx'
 
 //Gestion de Galeria
 import ListGaleria from './views/logeadas/CRUDGaleria/ListGaleria.jsx'
@@ -73,7 +73,7 @@ const App = () => {
 
         {/*Todo para Gestionar Usuarios */}
         <Route path="/usuarios-admin" element={user?.tipo === "administrador" ? <ListUsuario /> : <Home />} />
-
+        <Route path='/usuario-comentario/:id' element={<ListUserComent />} />
 
       </Routes>
       <Footer />
