@@ -38,26 +38,15 @@
   ],
   "reservas": [
     {
-      "id": "e1c5",
-      "nombre": "franco",
-      "email": "franco@gmail.com",
-      "telefono": "935351763",
-      "vehiculo": "Moto",
-      "servicio": "2 ruedas Optimo",
-      "fecha": "2024-12-18",
-      "hora": "17:26",
-      "notas": "Quiero un  servicio rapido porfavor"
-    },
-    {
-      "id": "2aeb",
+      "id": "32be",
       "nombre": "franco123",
       "email": "franco2@gmail.com",
-      "telefono": "98563245",
+      "telefono": "986265615",
       "vehiculo": "Camioneta",
-      "servicio": "3 ruedas Optimo",
-      "fecha": "2024-12-19",
-      "hora": "18:32",
-      "notas": "llegare un poco tarde, me cuida please"
+      "servicio": "4 ruedas Optimos",
+      "fecha": "2024-12-23",
+      "hora": "16:35",
+      "notas": "Nos gustaria que pongan la Rosa de guadalupe mientras esperamos"
     }
   ],
   "Galeria": [
@@ -74,10 +63,10 @@
       "img": "https://firebasestorage.googleapis.com/v0/b/clothes-8cf27.firebasestorage.app/o/CW-galeria%2F242dfb5c-6954-4d84-9d93-7d9c3a4d8878.com?alt=media&token=a6a6cec9-b8e0-4556-a1e3-8fc398cc44a0"
     },
     {
-      "id": "7c5a",
-      "titulo": "Gamer",
-      "descripcion": "prueba de almacenamiento",
-      "img": "https://firebasestorage.googleapis.com/v0/b/clothes-8cf27.firebasestorage.app/o/CW-galeria%2Ff7e5f875-f98c-462d-9a61-6686323f5a2a.jpg?alt=media&token=66637289-5510-45f2-8d91-5308787078df"
+      "id": "b3e8",
+      "titulo": "Servicio Optimo",
+      "descripcion": "Nuestros resultados son optimos al gusto del cliente, siempre innovando y mejorando",
+      "img": "https://firebasestorage.googleapis.com/v0/b/clothes-8cf27.firebasestorage.app/o/CW-galeria%2F19f7da0c-7baf-4f0a-a91c-8e3f5e9cb6ec.jpg?alt=media&token=4b2979ee-33d1-4880-862d-cdb4fd3864c7"
     }
   ],
   "Comentarios": [
@@ -85,120 +74,113 @@
       "id": "1",
       "usuarioId": 2,
       "usuario": "Juan",
-      "comentario": "El lavado de este carro fue muy bueno. Gracias por su atención.",
+      "comentario": "El lavado de este carro fue muy bueno. ¡Gracias por su atención! 😊🚗✨",
       "fecha": "2024-12-07"
+    },
+    {
+      "id": "1734703372560",
+      "comentario": "Nunca había visto mi carro tan limpio por dentro y por fuera. ¡Gracias, equipo! 🧽✨🚗",
+      "usuarioId": "767d",
+      "usuario": "jefferson",
+      "fecha": "2024-12-08"
     },
     {
       "id": "2",
       "usuarioId": 3,
       "usuario": "Anna Picón",
-      "comentario": "Este lavado no me gustó. Mejoraría la calidad del producto.",
+      "comentario": "Este lavado no me gustó 😔. ¡Por favor mejoren la calidad de los productos! 🫧",
       "fecha": "2024-12-08"
     },
     {
-      "id": "1734203655342",
-      "comentario": "Soy el administrador, prueba de comentario 3",
-      "usuarioId": "1",
-      "usuario": "Admin",
-      "fecha": "14/12/2024"
+      "id": "1734703329087",
+      "comentario": "¡El mejor lavado que he recibido! 10/10, lo recomiendo muchísimo. 🫧🚗✨",
+      "usuarioId": "5015",
+      "usuario": "franco",
+      "fecha": "2024-12-15"
     },
     {
       "id": "1734203748550",
-      "comentario": "Soy fraco cliente y me parece wen servicio :3",
+      "comentario": "Soy fraco cliente y me parece wen servicio :3 😄🚗",
       "usuarioId": "5015",
       "usuario": "franco",
-      "fecha": "14/12/2024"
+      "fecha": "2024-12-14"
     },
     {
       "id": "1734203989353",
-      "comentario": "prueba de comentario ultramente larguisimo :3 , extraño a mi ex",
+      "comentario": "Prueba de comentario ultramente larguisimo :3, extraño a mi ex 😢💔",
       "usuarioId": "c876",
       "usuario": "franco123",
-      "fecha": "14/12/2024"
+      "fecha": "2024-12-14"
     },
     {
       "id": "1734221456071",
-      "comentario": "EsEste es un buen servicio",
+      "comentario": "Este es un buen servicio. ¡Gracias por todo! 😊🧼",
       "usuarioId": "c876",
       "usuario": "franco123",
-      "fecha": "14/12/2024"
+      "fecha": "2024-12-14"
     },
     {
       "id": "1734357612303",
-      "comentario": "soy franco y me gusta su local es gratificante",
+      "comentario": "Soy franco y me gusta su local, es gratificante. 😊🏠✨",
       "usuarioId": "5015",
       "usuario": "franco",
-      "fecha": "16/12/2024"
+      "fecha": "2024-12-16"
     },
     {
       "id": "1734357645330",
-      "comentario": "las hormigas no son nada en este local, porque no hay suciedad que se les escape",
+      "comentario": "Las hormigas no son nada en este local porque no hay suciedad que se les escape. 🐜✨🚗",
       "usuarioId": "5015",
       "usuario": "franco",
-      "fecha": "16/12/2024"
+      "fecha": "2024-12-16"
+    },
+    {
+      "id": "1734703414289",
+      "comentario": "Mi camioneta quedó impecable y con un brillo espectacular. ¡Son los mejores! 🌟🚙✨",
+      "usuarioId": "418f",
+      "usuario": "manolo",
+      "fecha": "2024-12-16"
     },
     {
       "id": "1734384746164",
-      "comentario": "soy franco y me gusta react :3",
+      "comentario": "Soy franco y me gusta React :3. 👨‍💻🚀",
       "usuarioId": "c876",
       "usuario": "franco123",
-      "fecha": "16/12/2024"
+      "fecha": "2024-12-16"
     },
     {
-      "id": "1734661105222",
-      "comentario": "Donde esta la tabla de comentarios :(",
-      "usuarioId": "1",
-      "usuario": "Admin",
-      "fecha": "19/12/2024"
-    },
-    {
-      "id": 1734703141225,
-      "comentario": "Holis como tas :3",
+      "id": "1734703430001",
+      "comentario": "El personal siempre tiene una sonrisa y son súper atentos. ¡Mil gracias! 😄💖",
       "usuarioId": "418f",
       "usuario": "manolo",
-      "fecha": "20/12/2024"
+      "fecha": "2024-12-18"
     },
     {
-      "id": 1734703318660,
-      "comentario": "¡Increíble servicio! Mi auto parece recién salido de la agencia 😎✨.",
+      "id": "1734703318660",
+      "comentario": "¡Increíble servicio! Mi auto parece recién salido de la agencia 😎✨🚗.",
       "usuarioId": "5015",
       "usuario": "franco",
-      "fecha": "20/12/2024"
+      "fecha": "2024-12-20"
     },
     {
-      "id": 1734703329087,
-      "comentario": "El mejor lavado que he recibido. ¡10/10, lo recomiendo! 🫧🚗",
+      "id": "1734703329087",
+      "comentario": "El mejor lavado que he recibido. ¡10/10, lo recomiendo! 🫧🚗✨",
       "usuarioId": "5015",
       "usuario": "franco",
-      "fecha": "20/12/2024"
+      "fecha": "2024-12-20"
     },
     {
-      "id": 1734703372560,
-      "comentario": "Nunca había visto mi carro tan limpio por dentro y por fuera. ¡Gracias, equipo! 🧽✨",
+      "id": "1734703382234",
+      "comentario": "¡Atención de primera y resultados espectaculares! ¡Volveré sin duda! 🙌🚘✨",
       "usuarioId": "767d",
       "usuario": "jefferson",
-      "fecha": "20/12/2024"
+      "fecha": "2024-12-20"
     },
     {
-      "id": 1734703382234,
-      "comentario": "¡Atención de primera y resultados espectaculares! ¡Volveré sin duda! 🙌🚘",
-      "usuarioId": "767d",
-      "usuario": "jefferson",
-      "fecha": "20/12/2024"
-    },
-    {
-      "id": 1734703414289,
-      "comentario": "Mi camioneta quedó impecable y con un brillo espectacular. ¡Son los mejores! 🌟🚙",
+      "id": "1734703420925",
+      "comentario": "Me encanta el detalle que ponen en cada rincón. ¡Parecen magos del lavado! 🪄🚗✨",
       "usuarioId": "418f",
       "usuario": "manolo",
-      "fecha": "20/12/2024"
-    },
-    {
-      "id": 1734703420925,
-      "comentario": "Me encanta el detalle que ponen en cada rincón. ¡Parecen magos del lavado! 🪄🚗",
-      "usuarioId": "418f",
-      "usuario": "manolo",
-      "fecha": "20/12/2024"
+      "fecha": "2024-12-20"
     }
   ]
 }

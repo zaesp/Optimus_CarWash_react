@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; //npm i react-r
 
 import Navigation from './Components/Components-Navbar/Navigation';
+import './App.css';
 
 import Home from './views/Home/Home';
 import Promociones from './views/Servicios/Promociones';
@@ -50,16 +51,16 @@ const App = () => {
         setUser(JSON.parse(storedUser)); // Actualiza el estado global si el usuario es válido
       } catch (e) {
         console.error("Error al parsear el usuario:", e);
-        localStorage.removeItem("user"); // Si el JSON es inválido, elimínalo
+        localStorage.removeItem("user");
       }
     } else {
-      setUser(null); // Si no hay usuario en el localStorage, se elimina el estado global
+      setUser(null);
     }
   }, []);
 
   return (
     <Router>
-      <Navigation user={user} setUser={setUser} />
+      <Navigation user={user} setUser={setUser}  />
 
       {console.log("Usuario actual:", user)}
       <Routes>
