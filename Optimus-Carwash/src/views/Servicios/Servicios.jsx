@@ -1,6 +1,8 @@
 import { Card } from 'react-bootstrap';
 import imagenes from '../../assets/imagenes.js';
 import '../Servicios/Servicios.css';
+import '../Servicios/Servicios.scss';
+
 
 const Servicios = () => {
   return (

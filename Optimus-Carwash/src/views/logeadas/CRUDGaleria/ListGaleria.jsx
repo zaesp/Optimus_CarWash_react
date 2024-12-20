@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react'
 import { ObtenerURLImg, eliminarURLImg } from '../../../services/GaleriaServices.js'//funciones del GaleriaService
 import Swal from 'sweetalert2'
 import {deleteFile} from '../../../services/firebase/storageGaleriaService.js'
+import './ListGaleria.css';
 
 const ListGaleria = () => {
 

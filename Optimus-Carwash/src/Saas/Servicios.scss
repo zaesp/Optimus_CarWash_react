@@ -1,0 +1,118 @@
+// Variables para colores y ajustes
+$primary-color: #ff0000;
+$secondary-color: #fff;
+$text-color-light: white;
+$text-color-dark: #000;
+
+// Sección de Servicios
+.servicios_section {
+  padding: 50px 20px;
+  color: $text-color-light;
+
+  .servicios_title {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 36px;
+    color: $primary-color;
+    margin-bottom: 10px;
+  }
+
+  .servicios_categoria {
+    h3 {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      margin-top: 10px;
+      text-align: center;
+      font-size: 28px;
+      color: $text-color-light;
+      margin-bottom: 50px;
+    }
+  }
+}
+
+// Tarjetas de Servicios
+.servicio_card {
+  background: $secondary-color;
+  border: none;
+  border-radius: 10px;
+  margin: 40px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+  }
+
+  img {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-top: 10px;
+    width: 100%; // Hace que las imágenes sean responsivas
+    height: auto;
+  }
+
+  .servicio_card_title {
+    font-family: cursive;
+    font-size: 1.9rem ;
+    font-weight: bold;
+    color: $primary-color;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .servicio_card_text {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: $text-color-dark;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .servicio_card_price {
+    font-size: 22px;
+    font-weight: bold;
+    color: $text-color-dark;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+// Media Queries
+@media (max-width: 768px) {
+  .servicio_card {
+    .servicio_card_title {
+      font-size: 18px; // Reduce el tamaño del título
+    }
+
+    .servicio_card_text {
+      font-size: 14px; // Reduce el tamaño del texto
+    }
+
+    .servicio_card_price {
+      font-size: 16px; // Reduce el tamaño del precio
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .servicio_card {
+    margin: 5px; // Reduce los márgenes entre cards
+
+    .servicio_card_title {
+      font-size: 16px; // Títulos más pequeños en móviles
+    }
+
+    .servicio_card_text {
+      font-size: 12px;
+      margin: 5px 0; // Espacio más ajustado
+    }
+
+    .servicio_card_price {
+      font-size: 14px;
+      margin-bottom: 5px;
+    }
+  }
+}

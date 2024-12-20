@@ -190,6 +190,13 @@
       "usuarioId": "c876",
       "usuario": "franco123",
       "fecha": "18/12/2024"
+    },
+    {
+      "id": 1734661105222,
+      "comentario": "Donde esta la tabla de comentarios :(",
+      "usuarioId": "1",
+      "usuario": "Admin",
+      "fecha": "19/12/2024"
     }
   ]
 }
