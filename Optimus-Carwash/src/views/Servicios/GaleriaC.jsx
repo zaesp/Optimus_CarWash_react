@@ -1,29 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./GaleriaC.css";
-
-import { useState, useEffect } from "react";
 import { ObtenerURLImg } from "../../services/GaleriaServices.js";
+import imagenes from "../../assets/imagenes.js";
 
 const GaleriaServicios = () => {
+  const [galeria, setGaleria] = useState([]);
 
-  const [galeria, setGaleria] = useState([])
-
+  // Cargar la galería de imágenes desde el servicio
   useEffect(() => {
-    try {
-      const ListarGaleria = async () => {
-        const galeria = await ObtenerURLImg();
-        setGaleria(galeria);
+    const ListarGaleria = async () => {
+      try {
+        const data = await ObtenerURLImg();
+        setGaleria(data);
+      } catch (error) {
+        console.error("Error al obtener la galería:", error);
       }
-      ListarGaleria();
-    } catch (error) {
-      console.error(error);
-    }
-  }, [])
-
+    };
+    ListarGaleria();
+  }, []);
 
   return (
     <div className="galeria-container full-width">
-      {galeria.map(({titulo,descripcion,img, id}) => (
+      {galeria.map(({ titulo, descripcion, img, id }) => (
         <div className="card" key={id}>
           <img src={img} alt={titulo} />
           <div className="overlay">
@@ -32,11 +30,77 @@ const GaleriaServicios = () => {
           </div>
         </div>
       ))}
+
+      {/* Imágenes adicionales estáticas */}
+      <div className="card">
+        <img src={imagenes.img21} alt="Imagen estática 1" />
+        <div className="overlay">
+          <h3>Proceso de lImpieza</h3>
+          <p>Contamos con las ultimas tecnologias de limpieza</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img22} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Proceso de secado</h3>
+          <p>El Gran Matias xD</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img23} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Equipo en Accion parte2</h3>
+          <p>Proceso de hechado de champoo</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img24} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Equipo en Accion</h3>
+          <p>Proceso de Enjuage</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img25} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Lavado de Moto Optimo</h3>
+          <p>Proceso de Lavado</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img26} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Equipo</h3>
+          <p>Siempre unidos, lograremos mas cosas</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img27} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Cliente Satisfecho</h3>
+          <p>Al servicio de la Ciudadania</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img28} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Personal de Equipo de Trabajo</h3>
+          <p>Equipazo</p>
+        </div>
+      </div>
+      <div className="card">
+        <img src={imagenes.img29} alt="Imagen estática 2" />
+        <div className="overlay">
+          <h3>Infraestructura a tu comodidad</h3>
+          <p>Por que queremos que esten bien comodo</p>
+        </div>
+      </div>
     </div>
   );
 };
 
 export default GaleriaServicios;
+
 
 /*
 

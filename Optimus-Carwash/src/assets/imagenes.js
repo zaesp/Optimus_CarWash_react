@@ -18,6 +18,15 @@ import LavadoMOptimo from '../assets/img/LavadoMOptimo.jpg';
 import LavadoTBasico from '../assets/img/LavadoTBasico.jpg';
 import LavadoTOptimo from '../assets/img/LavadoTOptimo.jpg';
 import Perfil from '../assets/img/Perfil.jpg';
+import servicio from '../assets/img/servicio.jpg';
+import Servicio2 from '../assets/img/servicio2.jpg';
+import Servicio3 from '../assets/img/servicio3.jpg';
+import Servicio4 from '../assets/img/servicio4.jpg';
+import Servicio7 from '../assets/img/servicio7.jpg';
+import Equipo from '../assets/img/equipo.jpg';
+import cliente from '../assets/img/cliente.jpg';
+import Personal from '../assets/img/personal.jpg';
+import Local from '../assets/img/local.jpg';
 
 export default {
     "img1": localAbierto,
@@ -39,6 +48,16 @@ export default {
     "img17": LavadoMOptimo,
     "img18": LavadoTBasico,
     "img19": LavadoTOptimo,
-    "img20": Perfil
+    "img20": Perfil,
+    "img21": servicio,
+    "img22": Servicio2,
+    "img23": Servicio3,
+    "img24": Servicio4,
+    "img25": Servicio7,
+    "img26": Equipo,
+    "img27": cliente,
+    "img28": Personal,
+    "img29": Local
+
 
 }   
