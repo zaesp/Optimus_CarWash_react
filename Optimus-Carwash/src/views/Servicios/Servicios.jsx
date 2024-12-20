@@ -16,7 +16,7 @@ const Servicios = () => {
             <h3>Servicios de 2 ruedas</h3>
             <div className="row justify-content-center">
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img6} />
+                <Card.Img variant="top" src={imagenes.img16} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>2 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
@@ -27,7 +27,7 @@ const Servicios = () => {
               </Card>
 
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img5} />
+                <Card.Img variant="top" src={imagenes.img17} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>2 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
@@ -44,7 +44,7 @@ const Servicios = () => {
             <h3>Servicios de 3 ruedas</h3>
             <div className="row justify-content-center">
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img6} />
+                <Card.Img variant="top" src={imagenes.img18} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>3 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
@@ -55,7 +55,7 @@ const Servicios = () => {
               </Card>
 
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img4} />
+                <Card.Img variant="top" src={imagenes.img19} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>3 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
@@ -72,7 +72,7 @@ const Servicios = () => {
             <h3>Servicios de 4 ruedas</h3>
             <div className="row justify-content-center">
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img4} />
+                <Card.Img variant="top" src={imagenes.img14} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>4 ruedas Básico</Card.Title>
                   <Card.Text className='servicio_card_text'>
@@ -83,7 +83,7 @@ const Servicios = () => {
               </Card>
 
               <Card className="servicio_card col-md-4 col-sm-12">
-                <Card.Img variant="top" src={imagenes.img5} />
+                <Card.Img variant="top" src={imagenes.img15} />
                 <Card.Body>
                   <Card.Title className='servicio_card_title'>4 ruedas Óptimo</Card.Title>
                   <Card.Text className='servicio_card_text'>
