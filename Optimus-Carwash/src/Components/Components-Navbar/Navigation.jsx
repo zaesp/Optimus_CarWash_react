@@ -1,14 +1,26 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import imagenes from '../../assets/imagenes';
 import '../Components-Navbar/Navigation.css';
 
-const Navigation = ({ user }) => {
+const Navigation = ({ user, setUser }) => {
+  const navigate = useNavigate();
+
 
   const [isMenuOpen, setIsMenuOpen] = useState(false); //dato booleano
-
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
+  const handleLoginLogout = () => {
+    if (user) {
+      setUser(null);
+      localStorage.removeItem("user"); // Elimina el usuario del localstorage.
+      console.log("Usuario eliminado del localstorage");
+      navigate('/login');
+    } else {
+      navigate('/login');
+    }
+  };
+  
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -70,14 +82,12 @@ const Navigation = ({ user }) => {
 
         {/* Botón de Iniciar Sesión */}
         <div className="login-button">
-          <Link to="/login" className="btn-login">
-            <i class="fa-solid fa-user"></i> {/* Ícono de usuario */}
+          <Link to="/login" className="btn-login" onClick={handleLoginLogout}>
+            <i class="fa-solid fa-user"></i>{/* Ícono de usuario */}{/*user ? 'Cerrar Sesión' : 'Iniciar Sesión'*/} 
           </Link>
         </div>
 
       </div>
-
-
 
 
 

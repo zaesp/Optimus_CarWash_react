@@ -4,15 +4,15 @@ import "./Login.css";
 const Login = ({ handleValues, handleSumit, sesion }) => {
   return (
     <div className="login-container2">
-      <h2 className="h3" >Iniciar Sesión</h2>
+      <h2 className="h3">Iniciar Sesión</h2>
 
       <form className="form2" onSubmit={handleSumit}>
-        <label className="label1" >Usuario</label>
+        <label className="label1">Usuario</label>
         <input
           type="text"
           name="usuario" // Importante para que handleValues pueda actualizar el estado
           placeholder="Ingresa tu nombre de usuario"
-          value={sesion.usuario}
+          value={sesion.usuario || ""} // Asegura que se maneje correctamente el valor inicial
           onChange={handleValues}
           required
         />
@@ -21,8 +21,8 @@ const Login = ({ handleValues, handleSumit, sesion }) => {
         <input
           type="password"
           name="password" // Importante para que handleValues pueda actualizar el estado
-          placeholder=""
-          value={sesion.password}
+          placeholder="Ingresa tu contraseña"
+          value={sesion.password || ""} 
           onChange={handleValues}
           required
         />

@@ -14,7 +14,7 @@ const RegistroUsuario = () => {
     const [user, setUser] = useState({
         usuario: "", 
         email: "", 
-        tipo: "cliente",
+        tipo: "",
         password: "", 
     });
 

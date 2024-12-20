@@ -7,12 +7,11 @@ import Swal from "sweetalert2"; // Para las alertas
 const InicioSesion = ({ setUser }) => {
   const [sesion, setSesion] = useState({
     usuario: "",
-    password: "",
+    password: "", // Inicializa como cadena vacía
   });
 
-  const navigate = useNavigate(); // Para redirecciones
+  const navigate = useNavigate();
 
-  // Manejar cambios en los campos del formulario
   const handleValues = (ev) => {
     const { name, value } = ev.target;
     setSesion({
@@ -21,14 +20,11 @@ const InicioSesion = ({ setUser }) => {
     });
   };
 
-
-  // Manejador del envío del formulario
   const handleSumit = async (ev) => {
     ev.preventDefault();
 
     const { usuario, password } = sesion;
 
-    // Validar campos vacíos
     if (!usuario || !password) {
       Swal.fire({
         title: "Campos Vacíos",
@@ -40,8 +36,8 @@ const InicioSesion = ({ setUser }) => {
     }
 
     try {
+      const usuarioObtenido = await obtenerUsuario(usuario, password);
       
-      const usuarioObtenido = await obtenerUsuario(usuario, password);   // Validar usuario en la base de datos  
       if (usuarioObtenido) {
         Swal.fire({
           title: "Bienvenido",
@@ -50,8 +46,11 @@ const InicioSesion = ({ setUser }) => {
           confirmButtonText: "Aceptar",
         });
 
-        setUser(usuarioObtenido); // Actualiza el estado global del usuario
-        navigate(`/`); // Redirigir al home con el ID del usuario  /:id
+        localStorage.setItem("user", JSON.stringify(usuarioObtenido)); // Almacenamos en el localstorage.
+        console.log("Cuenta de usuario",usuarioObtenido);
+        setUser(usuarioObtenido);
+
+        navigate(`/`);
       } else {
         Swal.fire({
           title: "Error",
