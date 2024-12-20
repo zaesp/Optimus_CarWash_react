@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 
-const ReservasTable = ({ reserva }) => {
+const ReservasTable = ({ reserva, handleEliminar }) => {
     return (
         <div className="table-wrapper">
 
@@ -44,7 +44,7 @@ const ReservasTable = ({ reserva }) => {
                                     <td>{notas}</td>
 
                                     <td>
-                                        <button className="btn btn-danger btn-sm-8 icon" >
+                                        <button className="btn btn-danger btn-sm-8 icon" onClick={() => handleEliminar(id)}  >
                                             <i className="fa-solid fa-trash-can"></i>
                                         </button>
                                     </td>

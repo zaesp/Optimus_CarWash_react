@@ -1,7 +1,6 @@
-/* Sección de Servicios */
+/* Sección de Servicios 
 .servicios_section {
     padding: 50px 20px;
-    background: linear-gradient(180deg, #222 0%, #333 100%);
     color: white;
 }
 
@@ -42,7 +41,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     margin-top: 10px;
-    width: 100%; /* Hace que las imágenes sean responsivas */
+    width: 100%; /* Hace que las imágenes sean responsivas 
     height: auto;
 }
 
@@ -65,7 +64,7 @@
     text-align: center; 
 }
 
-/* Estilo para el precio */
+/* Estilo para el precio 
 .servicio_card_price {
     font-size: 22px;
     font-weight: bold;
@@ -74,29 +73,29 @@
     margin-top: 10px;
 }
 
-/* Media Queries para pantallas más pequeñas */
+/* Media Queries para pantallas más pequeñas 
 @media (max-width: 768px) {
     .servicio_card_title {
-        font-size: 18px; /* Reduce el tamaño del título */
+        font-size: 18px; /* Reduce el tamaño del título 
     }
 
     .servicio_card_text {
-        font-size: 14px; /* Reduce el tamaño del texto */
+        font-size: 14px; /* Reduce el tamaño del texto 
     }
 
     .servicio_card_price {
-        font-size: 16px; /* Reduce el tamaño del precio */
+        font-size: 16px; /* Reduce el tamaño del precio 
     }
 }
 
 @media (max-width: 576px) {
     .servicio_card_title {
-        font-size: 16px; /* Títulos más pequeños en móviles */
+        font-size: 16px; /* Títulos más pequeños en móviles 
     }
 
     .servicio_card_text {
         font-size: 12px;
-        margin: 5px 0; /* Espacio más ajustado */
+        margin: 5px 0; /* Espacio más ajustado 
     }
 
     .servicio_card_price {
@@ -105,6 +104,7 @@
     }
 
     .servicio_card {
-        margin: 5px; /* Reduce los márgenes entre cards */
+        margin: 5px; /* Reduce los márgenes entre cards 
     }
 }
+*/

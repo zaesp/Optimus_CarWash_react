@@ -6,7 +6,7 @@ import Swal from "sweetalert2"; // Para las alertas
 
 const InicioSesion = ({ setUser }) => {
   const [sesion, setSesion] = useState({
-    usuario: "",
+    email: "",
     password: "", // Inicializa como cadena vacía
   });
 
@@ -23,9 +23,9 @@ const InicioSesion = ({ setUser }) => {
   const handleSumit = async (ev) => {
     ev.preventDefault();
 
-    const { usuario, password } = sesion;
+    const { email, password } = sesion;
 
-    if (!usuario || !password) {
+    if (!email || !password) {
       Swal.fire({
         title: "Campos Vacíos",
         text: "Todos los campos son obligatorios",
@@ -36,7 +36,7 @@ const InicioSesion = ({ setUser }) => {
     }
 
     try {
-      const usuarioObtenido = await obtenerUsuario(usuario, password);
+      const usuarioObtenido = await obtenerUsuario(email, password);
       
       if (usuarioObtenido) {
         Swal.fire({

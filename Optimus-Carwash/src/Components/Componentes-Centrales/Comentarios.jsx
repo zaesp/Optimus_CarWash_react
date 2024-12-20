@@ -26,7 +26,7 @@ const Comentarios = ({ user }) => {
     const ValidarComentario = async () => {
 
         const nuevo = {
-            id: Date.now(), // Generar ID basado en timestamp
+            id: String(Date.now()), // Convertir a cadena
             comentario: nuevoComentario,
             usuarioId: user.id,
             usuario: user.usuario,

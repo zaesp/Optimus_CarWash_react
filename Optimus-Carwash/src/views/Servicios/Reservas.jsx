@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import './Reservas.css';
+import './Reservas.scss';
 import imagenes from "../../assets/imagenes";
+
 
 const ReservationForm = () => {
   const [formData, setFormData] = useState({
