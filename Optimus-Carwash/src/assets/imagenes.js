@@ -58,6 +58,4 @@ export default {
     "img27": cliente,
     "img28": Personal,
     "img29": Local
-
-
 }   

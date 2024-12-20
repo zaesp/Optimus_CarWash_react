@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import UsuarioComentarioTable from '../../../Components/TablaControlUsuarios/UsuarioComentarioTable.jsx';
 import { ObtenerComentriosID, EliminarComentario } from '../../../services/ComentariosServices.js';
 import Swal from 'sweetalert2';
+import './LisUserComent.css';
 
 const ListUserComent = () => {
   const { id } = useParams();//obtenido del ver comentarios
@@ -46,7 +47,7 @@ const ListUserComent = () => {
 
   return (
     <>
-      <h1>Listado de Comentarios por Usuario</h1>
+      <h2 className='titulo_comentario'>Listado de Comentarios por Usuario</h2>
       <UsuarioComentarioTable comentarios={comentarios} handleEliminar={handleEliminar} />
     </>
   );
